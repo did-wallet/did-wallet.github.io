@@ -313,6 +313,12 @@
                 flex-shrink: 0;
                 width: var(--el-aside-width, 300px);
             }
+            .step {
+            display: none;
+            }
+            .step.active {
+                display: block;
+            }
         </style>
         <style>
             .el-footer {
@@ -20819,379 +20825,901 @@
                             <div class="form-content">
                                 <div class="section-header">
                                     <h5 class="sub-title">The Power of Financial Freedom</h5>
-                                    <h2 class="title">Let’s Get Started!</h2>
+                                    <h2 class="title" id="uni-form-title">Let’s Get Started!</h2>
                                     <div>
-                                        Please Enter your Email Address to Start your Online Application or
+                                        Please Enter your details to Start your Online Application or
                                         <a href="verify.html" class="cmn-btn">Use Verifiable Credentials</a>
                                     </div>
                                 </div>
-                                <form action="#">
+                                <form action="#" onsubmit="return preventFormAction(event)">
                                     <div id="applicationContainer">
-                                        <script id="metamorph-2-start" type="text/x-placeholder"></script>
-                                        <script id="metamorph-2-start" type="text/x-placeholder"></script>
-                                        <script id="metamorph-2-end" type="text/x-placeholder"></script>
-                                        <div style="height: 1px;">&nbsp;</div>
-                                        <script id="metamorph-3-start" type="text/x-placeholder"></script>
                                         <div id="ember850" class="ember-view">
                                             <section>
                                                 <div class="detailForm shiftInLine" data-bindattr-2="2">
                                                     <div class="col-group">
                                                         <div class="col-8">
-                                                            <script id="metamorph-7-start" type="text/x-placeholder"></script>
-                                                            <script id="metamorph-8-start" type="text/x-placeholder"></script>
-                                                            <span class="input"> Step 1 of 7 </span>
-                                                            <script id="metamorph-8-end" type="text/x-placeholder"></script>
-                                                            <script id="metamorph-7-end" type="text/x-placeholder"></script>
+                                                            <span class="input" id="step-info"> Step 1 of 5 </span>
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <script id="metamorph-9-start" type="text/x-placeholder"></script>
-                                                        <script id="metamorph-10-start" type="text/x-placeholder"></script>
-                                                        <progress id="progessStep" value="14.2" max="100"> </progress>
-                                                        <script id="metamorph-10-end" type="text/x-placeholder"></script>
-                                                        <script id="metamorph-9-end" type="text/x-placeholder"></script>
+                                                        <progress id="progressStep" value="14.2" max="100"></progress>
                                                     </div>
-                                                    <script id="metamorph-11-start" type="text/x-placeholder"></script>
-                                                    <div class="step1-topbanner">
-                                                        <i class="fa fa-info-circle"></i> To apply for a
-                                                        <script id="metamorph-12-start" type="text/x-placeholder"></script>
-                                                        Credit Card
-                                                        <script id="metamorph-12-end" type="text/x-placeholder"></script>
-                                                        , your annual income needs to be at least
-                                                        <script id="metamorph-13-start" type="text/x-placeholder"></script>
-                                                        $40,000
-                                                        <script id="metamorph-13-end" type="text/x-placeholder"></script>
-                                                        before tax.
-                                                    </div>
-                                                    <script id="metamorph-11-end" type="text/x-placeholder"></script>
-                                                    <h3 style="margin-top: 24px;">Your details</h3>
                                                 </div>
                                             </section>
+                                            <div class="detailForm shiftInLine">
+                                                <!-- Step 1 -->
+            <section class="step active" id="step1">
+                <div class="step1-topbanner">
+                    <i class="fa fa-info-circle"></i> To apply for a
+                    Credit Card
+                    , your annual income needs to be at least
+                    $40,000
+                    before tax.
+                </div>
+            
+                <div class="row">
+                    <label class="input">Title</label>
+                    <select id="ember866" class="ember-view title watermark" name="title">
+                        <option value=""></option>
+                        <option value="MR">Mr</option>
+                        <option value="MRS">Mrs</option>
+                        <option value="MS">Ms</option>
+                        <option value="MIS">Miss</option>
+                        <option value="DR">Doctor</option>
+                        <option value="SIR">Sir</option>
+                        <option value="LDY">Lady</option>
+                        <option value="PAS">Pastor</option>
+                        <option value="PRF">Professor</option>
+                        <option value="REV">Reverend</option>
+                    </select>
+                </div>
+                <div class="single-input">
+                    <label class="input">First Name</label>
+                    <input id="ember881" class="ember-view ember-text-field" type="text" name="firstName" placeholder="As per ID" />
+                </div>
+                <div class="single-input">
+                    <label class="input">Middle Name(s), if any</label>
+                    <input id="ember882" class="ember-view ember-text-field" type="text" name="middleName" placeholder="As per ID" />
+                </div>
+                <div class="single-input">
+                    <label class="input">Last Name</label>
+                    <input id="ember883" class="ember-view ember-text-field" type="text" name="lastName" placeholder="As per ID" />
+                </div>
+                <div class="single-input">
+                    <label class="input">Your email</label>
+                    <input id="ember884" class="ember-view ember-text-field" type="email" name="email" placeholder="me@mydomain.com.au" />
+                </div>
+                <div class="single-input">
+                    <label class="input">Mobile phone</label>
+                    <input id="ember885" class="ember-view ember-text-field" type="tel" pattern="[0-9]*" name="mobilePhone" placeholder="0412-341-234" />
+                </div>
+                <div class="single-input noBottomSpace">
+                    <label class="input">Date of birth</label>
+                    <input id="ember888" class="ember-view ember-text-field medium hasDatepicker" type="date" name="birthDate" placeholder="DD/MM/YYYY" />
+                </div>
+                <div class="single-input">
+                    <label class="input inline">Mother's maiden name (for security)</label>
+                    <input id="ember889" class="ember-view ember-text-field" type="text" name="maidenName" />
+                </div>
+                <div class="single-input focusOut">
+                    <div id="ember893" class="ember-view checkbox focusOut">
+                        <div class="flex">
+                            <div class="checkboxButton"></div>
+                            <div class="checkboxLabel bold">
+                                <p>By clicking Save & continue, you agree to <span>Bankio's Terms of Use, Privacy Policy, E-sign</span> & <span>communication Authorization.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="large submitButton cmn-btn" onclick="showNextStep(2,'Identity')">Save & continue</button>
+            </section>
+            <!-- Step 2 -->
+            <section class="top step" id="step2">
+                <div class="formQuestion inline single-input">Do you have any previous names?
+                    <div class="tooltip" title="Any previous names that you once held (e.g. Maiden Name)"></div>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input" type="radio" id="prevNameYes" name="hasPreviousFirstName" value="yes" style="padding: 0;">
+                    <label class="form-check-label" for="prevNameYes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input" type="radio" id="prevNameNo" name="hasPreviousFirstName" value="no" style="padding: 0;">
+                    <label class="form-check-label" for="prevNameNo">No</label>
+                </div>
+                <div class="formQuestion inline single-input">Are you known by any other names?
+                    <div class="tooltip" title="Any other names you were officially known as"></div>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input" type="radio" id="otherNameYes" name="hasOtherFirstName" value="yes" style="padding: 0;">
+                    <label class="form-check-label" for="otherNameYes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input input" type="radio" id="otherNameNo" name="hasOtherFirstName" value="no" style="padding: 0;">
+                    <label class="form-check-label" for="otherNameNo">No</label>
+                </div>
+                <div class="formQuestion inline single-input">Gender</div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input input" type="radio" id="male" name="gender" value="male" style="padding: 0;">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input input" type="radio" id="female" name="gender" value="female" style="padding: 0;">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="formQuestion inline single-input">Relationship status</div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input input" type="radio" id="single" name="maritalStatus" value="single" style="padding: 0;">
+                    <label class="form-check-label" for="single">Single</label>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input input" type="radio" id="married" name="maritalStatus" value="married" style="padding: 0;">
+                    <label class="form-check-label" for="married">Married/De facto</label>
+                </div>
+                <div class="single-input">
+                    <label class="input form-check-inline">Number of dependants (excluding spouse)</label>
+                    <input id="ember949" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="numOfDependants" placeholder="0">
+                </div>
+                <div class="formQuestion inline single-input"><label>Are you a permanent resident of Australia?</label>
+                    <div class="tooltip" title="You are a permanent Australian resident if you have Australian citizenship or a permanent resident visa."></div>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input" type="radio" id="residentYes" name="isResident" value="yes" style="padding: 0;">
+                    <label class="form-check-label" for="residentYes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline single-input">
+                    <input class="form-check-input" type="radio" id="residentNo" name="isResident" value="no" style="padding: 0;">
+                    <label class="form-check-label" for="residentNo">No</label>
+                </div>
+                <h6 style="margin-top: 10px;">Residential address in Australia
+                    <div class="tooltip" title="For overseas residents, please contact our Direct Banking Centre at 1300 308 021 or your local HSBC International Banking Centre (IBC)"></div>
+                </h6>
+                <div class="addressBlock">
+                    <div class="form-check-inline single-input">
+                        <label class="input">Unit no</label>
+                        <input id="ember1020" class="ember-view ember-text-field w50" type="text" name="unitNb">
+                    </div>
+                    <div class="form-check-inline single-input">
+                        <label class="input">Street no</label>
+                        <input id="ember1021" class="ember-view ember-text-field medium" type="text" name="streetNb">
+                    </div>
+                    <div class="form-check-inline single-input">
+                        <label class="input">Street name</label>
+                        <input id="ember1022" class="ember-view ember-text-field w160" type="text" name="street">
+                    </div>
+                   
+                    <div class="form-check-inline single-input">
+                        <label class="input">Suburb</label>
+                        <input id="ember1024" class="ember-view ember-text-field w160" type="text" name="suburb">
+                    </div>
+                    <div class="row single-input">
+                        <label class="input">State</label>
+                        <select id="ember1025" class="ember-view w115" name="state">
+                            <option class="watermark" value="">Please select</option>
+                            <option value="ACT">Australian Capital Territory</option>
+                            <option value="NSW">New South Wales</option>
+                            <option value="NT">Northern Territory</option>
+                            <option value="QLD">Queensland</option>
+                            <option value="SA">South Australia</option>
+                            <option value="TAS">Tasmania</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="WA">Western Australia</option>
+                        </select>
+                    </div>
+                    <div class="form-check-inline wider single-input">
+                        <label class="input">Postcode</label>
+                        <input id="ember1026" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="postcode">
+                    </div>
+                </div>
+                <div class="row single-input" style="margin-bottom: 20px;">
+                    <label class="input">How long at this address?</label>
+                    <div class="form-check-inline widerLittle noTopSpace">
+                        <label class="addressRightMore input">Years</label>
+                        <input id="ember955" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="years" placeholder="0">
+                    </div>
+                    <div class="form-check-inline single-input">
+                        <label class="addressRightMore input">Months</label>
+                        <input id="ember956" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="months" placeholder="0">
+                    </div>
+                </div>
+                <h6>Your Previous Australian residential address</h6>
+                <div class="addressBlock">
+                    <div class="single-input form-check-inline">
+                        <label class="input">Unit no</label>
+                        <input id="ember1056" class="ember-view ember-text-field w50" type="text" name="previousAddressUnitNb">
+                    </div>
+                    <div class="single-input form-check-inline">
+                        <label class="input">Street no</label>
+                        <input id="ember1057" class="ember-view ember-text-field medium" type="text" name="previousAddressStreetNb">
+                    </div>
+                    <div class="single-input form-check-inline">
+                        <label class="input">Street name</label>
+                        <input id="ember1058" class="ember-view ember-text-field w160" type="text" name="previousAddressStreet">
+                    </div>
+                    <div class="single-input form-check-inline">
+                        <label class="input">Suburb</label>
+                        <input id="ember1060" class="ember-view ember-text-field w160" type="text" name="previousAddressSuburb">
+                    </div>
+                    <div class="row single-input">
+                        <label class="input">State</label>
+                        <select id="ember1061" class="ember-view w115" name="previousAddressState">
+                            <option class="watermark" value="">Please select</option>
+                            <option value="ACT">Australian Capital Territory</option>
+                            <option value="NSW">New South Wales</option>
+                            <option value="NT">Northern Territory</option>
+                            <option value="QLD">Queensland</option>
+                            <option value="SA">South Australia</option>
+                            <option value="TAS">Tasmania</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="WA">Western Australia</option>
+                        </select>
+                    </div>
+                    <div class="single-input wider moreTopSpace form-check-inline">
+                        <label class="input">Postcode</label>
+                        <input id="ember1062" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="previousAddressPostcode">
+                    </div>
+                </div>
+                <div class="single-input moreTopSpace">
+                    <label class="input">How long at this address?</label>
+                    <div class="single-input widerLittle">
+                        <label class="addressRightMore input">Years</label>
+                        <input id="ember1030" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="previousAddressYears" placeholder="0">
+                    </div>
+                    <div class="single-input">
+                        <label class="addressRightMore input">Months</label>
+                        <input id="ember1031" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="previousAddressMonths" placeholder="0">
+                    </div>
+                </div>
+                
+                <div class="row single-input">
+                    <label class="input">Country/territory of birth</label>
+                    <select id="ember960" class="ember-view width300" name="countryBirth">
+                        <option class="watermark" value="">Please select</option>
+                        <option value="AUS">AUSTRALIA</option>
+                        <option value="HKG">HONG KONG</option>
+                        <option value="CHN">CHINA</option>
+                        <option value="IND">INDIA</option>
+                        <option value="NZL">NEW ZEALAND</option>
+                        <option value="GBR">UNITED KINGDOM</option>
+                        <option value="MYS">MALAYSIA</option>
+                    </select>
+                </div>
+                <div class="row single-input">
+                    <label class="input">Jurisdiction of tax residence
+                        <div class="tooltip" title="Country / Territory you have tax obligations to"></div>
+                    </label>
+                    <select id="ember961" class="ember-view width300" name="countryTax">
+                        <option class="watermark" value="">Please select</option>
+                        <option value="AUS">AUSTRALIA</option>
+                        <option value="HKG">HONG KONG</option>
+                        <option value="CHN">CHINA</option>
+                        <option value="IND">INDIA</option>
+                        <option value="NZL">NEW ZEALAND</option>
+                        <option value="GBR">UNITED KINGDOM</option>
+                        <option value="MYS">MALAYSIA</option>
+                    </select>
+                </div>
+                <div class="row single-input">
+                    <label class="input inline">Nationality (country/territory)</label>
+                    <div class="tooltip" title="If you are a multiple passport holder including Australia, please select Australia."></div>
+                    <select id="ember963" class="ember-view width300" name="nationality">
+                        <option class="watermark" value="">Please select</option>
+                        <option value="AUS">AUSTRALIA</option>
+                        <option value="HKG">HONG KONG</option>
+                        <option value="CHN">CHINA</option>
+                        <option value="IND">INDIA</option>
+                        <option value="NZL">NEW ZEALAND</option>
+                        <option value="GBR">UNITED KINGDOM</option>
+                        <option value="MYS">MALAYSIA</option>
+                    </select>
+                </div>
+                <div class="single-input">
+                    <div class="single-input inline spaceTop1">Do you hold one of the following Government issued cards?</div>
+                    <ul>
+                        <li>Commonwealth Seniors Health Card</li>
+                        <li>Health Care Card</li>
+                        <li>Pensioner Concession Card</li>
+                    </ul>
+                    <div class="form-check form-check-inline single-input">
+                        <input class="form-check-input" type="radio" id="govCardYes" name="receiveSocialBenefit" value="yes" style="padding: 0;">
+                        <label class="form-check-label" for="govCardYes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline single-input">
+                        <input class="form-check-input" type="radio" id="govCardNo" name="receiveSocialBenefit" value="no" style="padding: 0;">
+                        <label class="form-check-label" for="govCardNo">No</label>
+                    </div>
+                </div>
+                <div class="single-input">
+                    <div class="single-input inline spaceTop1">Are you currently an HSBC Australia customer?</div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="hsbcCustomerYes" name="isCustomer" value="yes" style="padding: 0;">
+                        <label class="form-check-label" for="hsbcCustomerYes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="hsbcCustomerNo" name="isCustomer" value="no" style="padding: 0;">
+                        <label class="form-check-label" for="hsbcCustomerNo">No</label>
+                    </div>
+                </div>
+                <div class="single-input focusOut">
+                    <div id="ember893" class="ember-view checkbox focusOut">
+                        <div class="flex">
+                            <div class="checkboxButton"></div>
+                            <div class="checkboxLabel bold">
+                                <p>By clicking Save & continue, you agree to <span>Bankio's Terms of Use, Privacy Policy, E-sign</span> & <span>communication Authorization.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="large submitButton cmn-btn" onclick="showNextStep(3,'Income and expenses')">Save and Continue</button>
 
-                                            <script id="metamorph-14-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-14-end" type="text/x-placeholder"></script>
-                                            <script id="metamorph-15-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-15-end" type="text/x-placeholder"></script>
-                                            <script id="metamorph-16-start" type="text/x-placeholder"></script>
-                                            <span class="LivePersonTagAllPageStart"></span>
-                                            <script id="metamorph-16-end" type="text/x-placeholder"></script>
+            </section>
+            <!-- Step 3 -->
+            <section class="top step" id="step3">            
+                <div class="single-input row">
+                    <label class="input">Employment status</label>
+                    <select id="employmentStatus" class="ember-view width300" name="employmentStatus">
+                        <option class="watermark" value="">Please select</option>
+                        <option value="F">Full Time Employment</option>
+                        <option value="P">Permanent Part Time</option>
+                        <option value="C">Contractor</option>
+                        <option value="A">Casual</option>
+                        <option value="S">Self Employed</option>
+                        <option value="E">Full Time Education</option>
+                        <option value="H">Home Duties/Housewife</option>
+                        <option value="R">Retired</option>
+                        <option value="U">Unemployed</option>
+                    </select>
+                </div>
+            
+                <div class="single-input row">
+                    <label class="input">Employment type
+                        <div class="tooltip" title="Someone that exercises significant control over a company e.g. CEO, CIO"></div>
+                    </label>
+                    <select id="employmentRole" class="ember-view width300" name="employmentRole">
+                        <option class="watermark" value="">Please select</option>
+                        <option value="BUSI">Business Owner</option>
+                        <option value="EMPL">Employee</option>
+                        <option value="KEYC">Key Controller</option>
+                    </select>
+                </div>
+            
+                <div class="single-input row">
+                    <label class="input">Employer's full name</label>
+                    <input id="employerName" class="ember-view ember-text-field" type="text" name="employerName" placeholder="Full name">
+                </div>
+            
+                <div class="single-input row">
+                    <label class="input">Occupation</label>
+                    <select id="occupation" class="ember-view width300" name="occupation">
+                        <option class="watermark" value="">Please select</option>
+                        <option value="01">Farmer/farm manager</option>
+                        <option value="02">Cleaner</option>
+                        <option value="03">Sales/service supervisor</option>
+                        <option value="04">Trade person</option>
+                        <option value="10">Building/Engineering</option>
+                        <option value="11">Sales/Service worker</option>
+                        <option value="13">Factory worker</option>
+                        <option value="14">Health and welfare</option>
+                        <option value="16">Production and Transport</option>
+                        <option value="19">Agricultural worker (excluding farmer)</option>
+                        <option value="20">Other / Not included elsewhere</option>
+                        <option value="21">Not in employment / Retired</option>
+                        <option value="23">Labourer</option>
+                        <option value="24">Manager</option>
+                        <option value="25:PE">Professional or Executive</option>
+                        <option value="25:RMO">Senior ranking military officer (Colonel or above)</option>
+                        <option value="25:DA">Diplomat / Ambassador</option>
+                        <option value="25:PO">Senior public official (judge / politician / civil servant)</option>
+                    </select>
+                </div>
+            
+                <div class="single-input">
+                    <label class="input">Job title</label>
+                    <input id="job" class="ember-view ember-text-field" type="text" name="job" placeholder="Job Title">
+                </div>
+            
+                <div class="single-input row">
+                    <label class="input">Industry</label>
+                    <select id="industry" class="ember-view width300" name="industry">
+                        <option class="watermark" value="">Please select</option>
+                        <option value="09637">Finance / Accounting / Auditing</option>
+                        <option value="09630">Real Estate / Property</option>
+                        <option value="11823">Education / Training</option>
+                        <option value="13990:G">Government</option>
+                        <option value="11810">Healthcare / Pharmaceutical</option>
+                        <option value="12290">Hospitality / Tourism</option>
+                        <option value="13990:HRR">Human Resources / Recruitment</option>
+                        <option value="09637">Legal / Judicial</option>
+                        <option value="13990:UO">Unemployed / Other</option>
+                        <option value="13990:DPS">Defence / Police Force / Security</option>
+                        <option value="06480">Sales / Retail / Wholesale / Trading</option>
+                        <option value="10710">Administrative and Support Services</option>
+                        <option value="08590">Telecommunications</option>
+                        <option value="07550">Transportation and Warehousing</option>
+                        <option value="08590">Advertising / Marketing / Public Relations</option>
+                        <option value="01010">Agriculture, Forestry, & Fishing</option>
+                        <option value="12913">Entertainment / Media / Arts</option>
+                        <option value="09614">Banking / Insurance / Financial Services</option>
+                        <option value="11849">Community / Social Services / Non-profit</option>
+                        <option value="05424">Information Technology / Computers</option>
+                        <option value="03340">Manufacturing / Construction / Mining</option>
+                    </select>
+                </div>
+            
+                <div class="addressBlock">
+                    <div class="single-input form-check-inline">
+                        <label class="input">Unit no</label>
+                        <input id="employerAddressUnitNb" class="ember-view ember-text-field w50" type="text" name="employerAddressUnitNb">
+                    </div>
+            
+                    <div class="single-input form-check-inline">
+                        <label class="input">Street no</label>
+                        <input id="employerAddressStreetNb" class="ember-view ember-text-field medium" type="text" name="employerAddressStreetNb">
+                    </div>
+            
+                    <div class="single-input form-check-inline">
+                        <label class="input">Street name</label>
+                        <input id="employerAddressStreet" class="ember-view ember-text-field w160" type="text" name="employerAddressStreet">
+                    </div>
+            
+                    <div class="single-input row">
+                        <label class="input">Type</label>
+                        <select id="employerAddressStreetType" class="ember-view w115" name="employerAddressStreetType">
+                            <option class="watermark" value="">Please select</option>
+                            <option value="ST">STREET</option>
+                            <option value="RD">ROAD</option>
+                            <option value="AVE">AVENUE</option>
+                            <option value="DR">DRIVE</option>
+                            <option value="CT">COURT</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+            
+                    <div class="single-input form-check-inline">
+                        <label class="input">Suburb</label>
+                        <input id="employerAddressSuburb" class="ember-view ember-text-field w160" type="text" name="employerAddressSuburb">
+                    </div>
+            
+                    <div class="single-input row">
+                        <label class="input">State</label>
+                        <select id="employerAddressState" class="ember-view w115" name="employerAddressState">
+                            <option class="watermark" value="">Please select</option>
+                            <option value="ACT">Australian Capital Territory</option>
+                            <option value="NSW">New South Wales</option>
+                            <option value="NT">Northern Territory</option>
+                            <option value="QLD">Queensland</option>
+                            <option value="SA">South Australia</option>
+                            <option value="TAS">Tasmania</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="WA">Western Australia</option>
+                        </select>
+                    </div>
+            
+                    <div class="single-input form-check-inline">
+                        <label class="input">Postcode</label>
+                        <input id="employerAddressPostcode" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="employerAddressPostcode">
+                    </div>
+                </div>
+            
+                <div class="single-input form-check-inline">
+                    <label class="input">Employer's phone number</label>
+                    <input id="employerPhoneNum" class="ember-view ember-text-field" type="tel" pattern="[0-9]*" name="employerPhoneNum">
+                </div>
+            
+                <div class="single-input row">
+                    <label class="input">How long have you worked for this employer?</label>
+                    <div class="single-input form-check-inline widerLittle noTopSpace">
+                        <label class="addressRightMore input">Years</label>
+                        <input id="employeeYears" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="employeeYears" placeholder="0">
+                    </div>
+                    <div class="single-input form-check-inline">
+                        <label class="addressRightMore input">Months</label>
+                        <input id="employeeMonths" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="employeeMonths" placeholder="0">
+                    </div>
+                </div>        
+            
+                <h5>Income</h5>
+            
+                <div class="single-input">
+                    <div class="horizotalBlock">
+                        <label class="input inline">Net salary/wages after tax
+                        <div class="tooltip" title="The amount of money you earn/receive from your primary source of income, after tax has been deducted"></div></label>
+                        <br>
+                        <div class="single-input noTopSpace">
+                            <input id="salaryWtTax" class="ember-view ember-text-field longer" type="text" pattern="[0-9]*" name="salaryWtTax" placeholder="AUD">
+                        </div>
+                    </div>
+                    <div class="single-input row">
+                        <label class="input inline">Frequency</label>
+                        <div class="single-input noTopSpace">
+                            <select id="salaryFreq" class="ember-view medium" name="salaryFreq">
+                                <option class="watermark" value="">Please select</option>
+                                <option value="M">Monthly</option>
+                                <option value="F">Fortnightly</option>
+                                <option value="W">Weekly</option>
+                                <option value="Y">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="single-input">
+                    <div class="row">
+                        <label class="input inline">Net other income after tax
+                        <div class="tooltip" title="The amount of money you earn/receive from sources other than your primary income (e.g. rental income, investment income, etc)"></div></label>
+                        <br>
+                        <div class="single-input noTopSpace">
+                            <input id="incomeWtTax" class="ember-view ember-text-field longer" type="text" pattern="[0-9]*" name="incomeWtTax" placeholder="AUD">
+                        </div>
+                    </div>
+                    <div class="single-input row">
+                        <label class="input inline">Frequency</label>
+                        <div class="single-input noTopSpace">
+                            <select id="incomeFreq" class="ember-view medium" name="incomeFreq">
+                                <option class="watermark" value="">Please select</option>
+                                <option value="M">Monthly</option>
+                                <option value="F">Fortnightly</option>
+                                <option value="W">Weekly</option>
+                                <option value="Y">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="single-input row"><label>Total monthly household expenses</label></div>
+                <div class="expense-hint">
+                    <label class="bold hint-title">Household living expenses include:</label> 
+                    <ul>
+                        <li><label class="bold">Shopping:</label> groceries, meals, clothing, footwear </li>
+                        <li><label class="bold">Transport:</label> public transport, car: fuel, servicing, parking, tolls</li>
+                        <li><label class="bold">Utilities:</label> electricity, water, gas, mobile, internet, rates, strata fees</li>
+                        <li><label class="bold">Insurance:</label> health, car, home, contents, life</li>
+                        <li><label class="bold">Entertainment:</label> streaming subscriptions, concerts, activities, holidays</li>
+                        <li><label class="bold">Health:</label> medical, fitness, sport</li>
+                        <li><label class="bold">Other:</label> childcare, education, child/spousal maintenance, pet expenses</li>
+                        <br>
+                        <li><label class="bold">Don't include:</label> rent or repayments for loans and credit cards here</li>
+                    </ul>
+                </div>
+                <div class="single-input">
+                    <div class="horizotalBlock">
+                        <label class="input inline">Monthly household living expenses</label>
+                        <br>
+                        <div class="formElementInline noTopSpace">
+                            <input id="totalShareOfLivingExp" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="totalShareOfLivingExp" placeholder="AUD">
+                        </div>
+                    </div>
+                    <div class="single-input">
+                        <label class="input inline">Your share in percentage</label>
+                        <br>
+                        <div class="single-input noTopSpace">
+                            <label class="addressRightMore input">%</label>
+                            <input id="percentageOfLivingExp" class="ember-view ember-text-field medium" type="text" pattern="[0-9]*" name="percentageOfLivingExp" placeholder="%">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="single-input focusOut">
+                    <div id="ember893" class="ember-view checkbox focusOut">
+                        <div class="flex">
+                            <div class="checkboxButton"></div>
+                            <div class="checkboxLabel bold">
+                                <p>By clicking Save & continue, you agree to <span>Bankio's Terms of Use, Privacy Policy, E-sign</span> &amp; <span>communication Authorization.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="cmn-btn" style="margin-bottom: 40px;" onclick="showNextStep(4,'Commitments, loans and assets')">Save &amp; continue</button>
+            </section>
+            <!-- Step 4 -->
+            <section class="step" id="step4">
+    <p>(In Australian dollars please)</p>
 
-                                            <script id="metamorph-17-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-18-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-18-end" type="text/x-placeholder"></script>
-                                            <script id="metamorph-17-end" type="text/x-placeholder"></script>
-                                            <script id="metamorph-19-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-19-end" type="text/x-placeholder"></script>
-                                            <script id="metamorph-20-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-20-end" type="text/x-placeholder"></script>
+    <h5>Commitments and loans</h5>
 
-                                            <script id="metamorph-21-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-21-end" type="text/x-placeholder"></script>
+    <div class="single-input">
+        <label class="input inline">Your share of monthly rent/mortgage repayments
+            <div class="tooltip" title="Amount you pay from your personal income towards Home Loan and/or Investment Property repayments, Rent or Board, on a monthly basis."></div>
+        </label>
+        <br>
+        <input id="shareOfMortgageOrRent" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="shareOfMortgageOrRent" placeholder="AUD">
+    </div>
 
-                                            <script id="metamorph-22-start" type="text/x-placeholder"></script>
+    <div class="single-input">
+        <label class="input inline">Your share of all other monthly loan repayments
+            <div class="tooltip" title="Other loan repayments paid from your personal income, each month e.g. Personal Loan repayments, Car Loan repayments (do not include mortgage/rent from above)."></div>
+        </label>
+        <br>
+        <input id="shareOfOtherLoans" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="shareOfOtherLoans" placeholder="AUD">
+    </div>
 
-                                            <div class="detailForm shiftInLine" data-bindattr-3="3">
-                                                <section>
-                                                    <div class="row">
-                                                        <label class="input">Title</label>
-                                                        <select id="ember866" class="ember-view title watermark" em-field="title" em-aside="under" em-valid="sreq" name="title">
-                                                            <option value=""></option>
-                                                            <script id="metamorph-23-start" type="text/x-placeholder"></script>
-                                                            <option value="MR">Mr</option>
-                                                            <option value="MRS">Mrs</option>
-                                                            <option value="MS">Ms</option>
-                                                            <option value="MIS">Miss</option>
-                                                            <option value="DR">Doctor</option>
-                                                            <option value="SIR">Sir</option>
-                                                            <option value="LDY">Lady</option>
-                                                            <option value="PAS">Pastor</option>
-                                                            <option value="PRF">Professor</option>
-                                                            <option value="REV">Reverend</option>
-                                                            <script id="metamorph-23-end" type="text/x-placeholder"></script>
-                                                        </select>
-                                                    </div>
-                                                    <div class="single-input">
-                                                        <label class="input">First Name</label>
-                                                        <input
-                                                            id="ember881"
-                                                            class="ember-view ember-text-field"
-                                                            type="text"
-                                                            name="firstName"
-                                                            em-holder="As per ID"
-                                                            em-field="firstName"
-                                                            em-valid="only-ascii name req min_2 max_16"
-                                                            em-aside="under"
-                                                            placeholder="As per ID"
-                                                        />
-                                                        <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
-                                                    </div>
-                                                    <div class="single-input">
-                                                        <label class="input">Middle Name(s), if any</label>
-                                                        <input
-                                                            id="ember882"
-                                                            class="ember-view ember-text-field"
-                                                            type="text"
-                                                            name="middleName"
-                                                            em-holder="As per ID"
-                                                            em-field="middleName"
-                                                            em-valid="only-ascii name min_1 max_23"
-                                                            em-aside="under"
-                                                            placeholder="As per ID"
-                                                        />
-                                                    </div>
-                                                    <div class="single-input">
-                                                        <label class="input">Last Name</label>
-                                                        <input
-                                                            id="ember883"
-                                                            class="ember-view ember-text-field"
-                                                            type="text"
-                                                            name="lastName"
-                                                            em-holder="As per ID"
-                                                            em-field="lastName"
-                                                            em-valid="only-ascii name req min_2 max_20"
-                                                            em-aside="under"
-                                                            placeholder="As per ID"
-                                                        />
-                                                    </div>
-                                                    <div class="single-input">
-                                                        <label class="input">Your email</label>
-                                                        <input
-                                                            id="ember884"
-                                                            class="ember-view ember-text-field"
-                                                            type="email"
-                                                            name="email"
-                                                            em-holder="me@mydomain.com.au"
-                                                            em-field="email"
-                                                            em-valid="only-ascii req max_50 email"
-                                                            placeholder="me@mydomain.com.au"
-                                                        />
-                                                    </div>
-                                                    <div class="single-input">
-                                                        <label class="input">Mobile phone</label>
-                                                        <input
-                                                            id="ember885"
-                                                            class="ember-view ember-text-field"
-                                                            type="tel"
-                                                            pattern="[0-9]*"
-                                                            name="mobilePhone"
-                                                            em-holder="0412-341-234"
-                                                            em-field="mobilePhone"
-                                                            em-valid="only-ascii reqMobilePhone mobilePhone"
-                                                            em-type="phone"
-                                                            em-mask="9999-999-999"
-                                                            placeholder="0412-341-234"
-                                                        />
-                                                    </div>
-                                                </section>
+    <div class="single-input">
+        <label class="input inline">Total mortgage balance owing
+            <div class="tooltip" title="The outstanding Home Loan amount/s owing on any properties you own"></div>
+        </label>
+        <br>
+        <input id="totalMortgageBal" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="totalMortgageBal" placeholder="AUD">
+    </div>
 
-                                                <section>
-                                                    <div class="single-input noBottomSpace">
-                                                        <label class="input">Date of birth</label>
-                                                        <input
-                                                            id="ember888"
-                                                            class="ember-view ember-text-field medium hasDatepicker"
-                                                            type="date"
-                                                            pattern="[0-9]*"
-                                                            name="birthDate"
-                                                            em-holder="DD/MM/YYYY"
-                                                            em-field="birthDate"
-                                                            em-valid="only-ascii date is18 ageLessThan100"
-                                                            em-aside="under"
-                                                            em-type="cal"
-                                                            em-dateshift="-18y"
-                                                            em-mask="?99/99/9999"
-                                                            inputmode="decimal"
-                                                            placeholder="DD/MM/YYYY"
-                                                        />
-                                                        <!-- <img class="ui-datepicker-trigger" src="/etc/designs/hsbc/au/webapps/horas/img/calendar.png" alt="" title="" /> -->
-                                                    </div>
+    <div class="single-input">
+        <label class="input">How many credit cards and store cards do you have?
+            <div class="tooltip" title="Total number of Credit Cards and Store Cards you currently have"></div>
+        </label>
+        <input id="numOfCards" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="numOfCards" inputmode="decimal">
+    </div>
 
-                                                    <div class="single-input">
-                                                        <label class="input inline">Mother's maiden name (for security)</label>
-                                                        <div class="tooltip" title="The maiden name is your mother's surname before she was married."></div>
-                                                        <input id="ember889" class="ember-view ember-text-field" type="text" name="maidenName" em-field="maidenName" em-valid="only-ascii req namespace min_2 max_40 onlyLetters" />
-                                                    </div>
-                                                    <script id="metamorph-26-start" type="text/x-placeholder"></script>
+    <h5>Assets</h5>
 
-                                                    <div class="single-input focusOut">
-                                                        <div id="ember893" class="ember-view checkbox focusOut" em-field="agreesPolicy" em-valid="check" em-aside="under checkboxWrapped">
-                                                            <div class="flex">
-                                                                <div class="checkboxButton"></div>
-                                                                <div class="checkboxLabel bold">
-                                                                    <p>By clicking Save & continue, you agree to <span>Bankio's Terms of Use, Privacy Policy, E-sign</span> &amp; <span>communication Authorization.</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+    <div class="single-input">
+        <label class="input inline">Total value of your real estate
+            <div class="tooltip" title="The combined and current value of your home and any other properties you own"></div>
+        </label>
+        <input id="valueOfEstate" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="valueOfEstate" placeholder="AUD">
+    </div>
 
-                                                    <div id="electronicConsent" class="modal destroyed">
-                                                        <h3>Electronic Communication Consent</h3>
+    <div class="single-input">
+        <label class="input inline">Total value of your vehicles/boats
+            <div class="tooltip" title="The combined and current value of any cars and/or boats that you own"></div>
+        </label>
+        <input id="valueOfVehiclesOrBoats" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="valueOfVehiclesOrBoats" placeholder="AUD">
+    </div>
 
-                                                        <p>
-                                                            I consent to HSBC communicating electronically with me, including sending and receiving (a) product disclosure statements, terms and conditions, financial services guides and other
-                                                            contractual documentation; (b) statements of my account; (c) notices and other documents from HSBC to me about my account(s)/product(s); (d) variations to the contract relating to
-                                                            my account(s)/product(s); and (e) notices from HSBC to me to my nominated email address or mobile phone, and authorise HSBC to act on my electronic instructions. I am aware of the
-                                                            risks of sending messages via email and agree that HSBC is not responsible for any loss arising from your personal information being intercepted by an unauthorised person before it
-                                                            arrives at HSBC's email address.
-                                                        </p>
+    <div class="single-input">
+        <label class="input inline">Total value of your savings and shares
+            <div class="tooltip" title="The combined and current value of any Savings/Term Deposit accounts and Shares that you own"></div>
+        </label>
+        <input id="valueOfSavingShares" class="ember-view ember-text-field" type="text" pattern="[0-9]*" name="valueOfSavingShares" placeholder="AUD">
+    </div>
 
-                                                        <p>
-                                                            You must ensure that: (a) you check your email, mobile phone and/or our website regularly for notices and other communication from us; (b) you keep your email address and mobile
-                                                            phone number up-to-date and notify us when it changes; and (c) emails from us to your email address are not blocked.
-                                                        </p>
+    <h5>Credit limit</h5>
+    <div id="isLimited" class="ember-view focusOut">
+        <div class="formQuestion spaceTop1">Do you want to nominate a desired credit limit? 
+            If you select 'No' we will assign one to you.
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="creditLimitYes" name="isLimited" value="yes" style="padding: 0;">
+            <label class="form-check-label" for="creditLimitYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="creditLimitNo" name="isLimited" value="no" style="padding: 0;">
+            <label class="form-check-label" for="creditLimitNo">No</label>
+        </div>
+    </div>
 
-                                                        <p>
-                                                            You may choose to opt-out of HSBC communicating with you electronically by notifying us through HSBC Internet Banking or by phone on 132 152 or +612 9005 8511 if calling from
-                                                            overseas.
-                                                        </p>
+    <div class="formQuestion spaceTop1" id="isConsent">Do you want to allow overlimit for your purchases?</div>
+    <div id="creditLimitEMGIncrease" class="ember-view focusOut">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="overlimitYes" name="creditLimitEMGIncrease" value="yes" style="padding: 0;">
+            <label class="form-check-label" for="overlimitYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="overlimitNo" name="creditLimitEMGIncrease" value="no" style="padding: 0;">
+            <label class="form-check-label" for="overlimitNo">No</label>
+        </div>
+    </div>
 
-                                                        <button class="forward inline" data-ember-action="5">Print</button>
-                                                    </div>
-
-                                                    <script id="metamorph-26-end" type="text/x-placeholder"></script>
-                                                </section>
-
-                                                <section class="submit">
-                                                    <div class="actionButtons">
-                                                        <script id="metamorph-29-start" type="text/x-placeholder"></script>
-                                                        <button class="large submitButton cmn-btn" name="saveContinue" em-action="saveContinue" style="margin-bottom: 40px;">Save &amp; continue</button>
-                                                        <script id="metamorph-30-start" type="text/x-placeholder"></script>
-                                                        <script id="metamorph-30-end" type="text/x-placeholder"></script>
-                                                        <script id="metamorph-29-end" type="text/x-placeholder"></script>
-                                                    </div>
-                                                    <script id="metamorph-31-start" type="text/x-placeholder"></script>
-                                                    <script id="metamorph-32-start" type="text/x-placeholder"></script>
-                                                    <script id="metamorph-32-end" type="text/x-placeholder"></script>
-                                                    <script id="metamorph-31-end" type="text/x-placeholder"></script>
-                                                </section>
-                                            </div>
-                                            <script id="metamorph-33-start" type="text/x-placeholder"></script>
-                                            <div class="step1-banner">
-                                                <div>
-                                                    <div>
-                                                        <h4><i class="fa fa-info-circle"></i> How to retrieve your application</h4>
-                                                    </div>
-                                                    <p>
-                                                        Simply complete the above details and continue. We will send you an email with your reference code and instructions on how to retrieve and complete your application anywhere, anytime.
-                                                    </p>
-                                                </div>
-
-                                                <div style="margin-top: 30px;">
-                                                    <div>
-                                                        <h4><i class="fa fa-user"></i> Who can apply</h4>
-                                                    </div>
-                                                    <ul>
-                                                        <li><i class="fa fa-check-circle"></i> Over the age of 18</li>
-                                                        <li>
-                                                            <i class="fa fa-check-circle"></i> Earn at least
-                                                            <script id="metamorph-34-start" type="text/x-placeholder"></script>
-                                                            $40,000
-                                                            <script id="metamorph-34-end" type="text/x-placeholder"></script>
-                                                            p.a before tax
-                                                        </li>
-                                                        <li><i class="fa fa-check-circle"></i> Have a good credit rating</li>
-                                                        <li><i class="fa fa-check-circle"></i> An Australian resident</li>
-                                                    </ul>
-                                                </div>
-                                                <div id="content_main_advanced_expander_1" class="sm-12 clear-float" style="margin-top: 30px;">
-                                                    <div class="anchor" id="additional-requirements-1"></div>
-
-                                                    <div class="A-EXPCNT-RW-RBWM expander">
-                                                        <div
-                                                            class="dropdown"
-                                                            aria-controls="491186156__panel0"
-                                                            role="button"
-                                                            tabindex="0"
-                                                            aria-expanded="true"
-                                                            style="border-bottom: 1px solid rgb(215, 216, 214); padding-bottom: 10px; margin-bottom: 10px;"
-                                                        >
-                                                            <h4 id="491186156__tab0" class="dropdown-text expanded">Application documents&nbsp;</h4>
-                                                        </div>
-                                                        <section id="491186156__panel0" class="exp-content expanded" aria-hidden="false" tabindex="-1">
-                                                            <div class="exp-panel">
-                                                                <div class="cc-wrapper O-COLCTRL-RW-DEV" role="region">
-                                                                    <div id="content_main_columnControl_6">
-                                                                        <div class="cc cc-columns-100">
-                                                                            <div id="content_main_columnControlColumn_10" class="cc-column">
-                                                                                <div class="M-CONTMAST-RW-RBWM O-SMARTSPCGEN-DEV rich-text" role="region">
-                                                                                    <div id="content_main_richtext_8" class="A-PAR16R-RW-ALL-WRAPPER" data-date-format="D-M-YYYY" data-time-format="HH:MM:SS A" data-zone="GMT">
-                                                                                        <p class="A-PAR16R-RW-ALL"><strong>Application documents that we accept</strong></p>
-                                                                                        <p class="A-PAR16R-RW-ALL">We accept the following documents during the application process.&nbsp;</p>
-                                                                                        <p class="A-PAR16R-RW-ALL"><strong>Proof of identity</strong></p>
-                                                                                        <ul class="A-LSTU-RW-ALL">
-                                                                                            <li>Australian driver's licence or passport</li>
-                                                                                        </ul>
-                                                                                        <p class="A-PAR16R-RW-ALL"><strong>Proof of residency if you're not an Australian citizen</strong></p>
-                                                                                        <ul class="A-LSTU-RW-ALL">
-                                                                                            <li>Passport, Australian visa, and employment contract (all pages) –&nbsp; please provide all 3 documents</li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="O-SMARTSPCGEN-DEV M-CONTMAST-RW-RBWM M-BSCTBL-RW-RBWM" role="region">
-                                                                                    <div
-                                                                                        data-accessibility-tick-icon-text="available "
-                                                                                        data-accessibility-cross-icon-text="Not available "
-                                                                                        id="content_main_basicTable_2"
-                                                                                        class="table-wrapper"
-                                                                                    >
-                                                                                        <table class="desktop" style="background-color: #f2f2f2;">
-                                                                                            <caption>
-                                                                                                <div class="A-PAR16R-RW-ALL text-container text">
-                                                                                                    <strong>Proof of income</strong>
-                                                                                                </div>
-                                                                                            </caption>
-                                                                                            <thead>
-                                                                                                <tr>
-                                                                                                    <th scope="col">Full-time,part-time or casual</th>
-                                                                                                    <th scope="col">Self employed</th>
-                                                                                                    <th scope="col">Retired</th>
-                                                                                                </tr>
-                                                                                            </thead>
-                                                                                            <tbody>
-                                                                                                <tr>
-                                                                                                    <td><p>Most recent payslip, showing year-to-date earnings, issued within the last 30 days</p></td>
-                                                                                                    <td>
-                                                                                                        <p>Most recent Australian Tax Office Notice of Assessment, issued within the last 16 months</p>
-                                                                                                        <p>AND</p>
-                                                                                                        <p>Document that contains your ABN</p>
-                                                                                                    </td>
-                                                                                                    <td>
-                                                                                                        <p>2 most recent superannuation income credit transactions</p>
-                                                                                                        <p>OR</p>
-                                                                                                        <p>Bank transaction details of your 2 most recent superannuation income deposits</p>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <div class="M-CONTMAST-RW-RBWM O-SMARTSPCGEN-DEV rich-text" role="region">
-                                                                                    <div id="content_main_richtext_9" class="A-PAR16R-RW-ALL-WRAPPER" data-date-format="D-M-YYYY" data-time-format="HH:MM:SS A" data-zone="GMT">
-                                                                                        <p class="A-PAR16R-RW-ALL"><strong>Other sources of income</strong></p>
-                                                                                        <ul class="A-LSTU-RW-ALL">
-                                                                                            <li>Property rental income – most recent property rental statement</li>
-                                                                                            <li>Interest income from investments or dividend income from shares – most recent investment or dividend share statements</li>
-                                                                                            <li>Overseas income – 2 most recent overseas income credits for each source of income</li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <script id="metamorph-33-end" type="text/x-placeholder"></script>
-                                            <script id="metamorph-22-end" type="text/x-placeholder"></script>
-                                            <script id="metamorph-35-start" type="text/x-placeholder"></script>
-                                            <script id="metamorph-35-end" type="text/x-placeholder"></script>
-                                        </div>
-                                        <script id="metamorph-3-end" type="text/x-placeholder"></script>
-                                    </div>
+    <div class="single-input focusOut">
+        <div id="agreesPolicy" class="ember-view checkbox focusOut">
+            <div class="flex">
+                <div class="checkboxButton"></div>
+                <div class="checkboxLabel bold">
+                    <p>By clicking Save & continue, you agree to <span>Bankio's Terms of Use, Privacy Policy, E-sign</span> &amp; <span>communication Authorization.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+                <!-- Your form fields for step 4 -->
+                <button type="button" class="large cmn-btn" onclick="showNextStep(5,'Review')">Save and Continue</button>
+            </section>
+            <!-- Step 5 -->
+            <section class="top clearfix step" id="step5">
+                <h6>For the Low Rate Credit Card</h6>
+            
+                <div class="col-md-12">
+                    <div class="cardImgLeft" data-bindattr-30="30">
+                        <img src="/etc/designs/bankio/webapps/horas/images/card_bankio_credit_card.png" data-bindattr-31="31" alt="">
+                        <p class="textOnCard nameOnCard">John Doe</p>
+                    </div>
+                    
+                    <span class="finSummaryTitle" data-bindattr-32="32">Your finances at a glance</span><br>
+                    <span class="finSummaryBody" data-bindattr-33="33">
+                        <span class="finSummaryCol1">0</span>
+                        <span class="finSummaryCol2">Total monthly income after tax</span><br> 
+                        <span class="finSummaryCol1">$0</span>
+                        <span class="finSummaryCol2">Your share of monthly household expenses</span><br> 
+                        <span class="finSummaryCol1">$0</span>
+                        <span class="finSummaryCol2">Your share of monthly mortgage and loan repayments</span><br> 
+                        <span class="finSummaryCol1">0</span>
+                        <span class="finSummaryCol2">Total limit of credit and store cards</span> 
+                    </span>
+                </div>
+                <div class="col-md-12">
+                    <h5 class="mt-2 wide">MR. John Doe</h5>
+            
+                    <div id="cell11">
+                        <span class="question">Born</span>
+                        <div class="answer">01/01/1980</div>
+                        <br>
+            
+                        <span class="question">Mother's maiden name</span>
+                        <div class="answer">Smith</div>
+                        <br>
+            
+                        <span class="question">Home phone number</span>
+                        <div class="answer"></div>
+                        <br>
+            
+                        <span class="question">Mobile number</span>
+                        <div class="answer">0410-123-456</div>
+                        <br>
+            
+                        <span class="question">Email</span>
+                        <div class="answer">john.doe@example.com</div>
+                    </div>
+            
+                    <div id="cell31">
+                        <h5 class="mt-2 wide">Identity</h5>
+            
+                        <pre class="question-empty"> </pre>
+                        <div class="answer">Male, Married</div>
+                        <br>
+            
+                        <span class="question">Dependants</span>
+                        <div class="answer">2 dependant(s)</div>
+                        <br>
+            
+                        <span class="question">Resident status</span>
+                        <div class="answer">Resident of Australia</div>
+                        <br>
+            
+                        <span class="question">My home address for</span>
+                        <div class="answer">2 years</div>
+                        <br>
+            
+                        <pre class="question-empty"> </pre>
+                        <div class="answer">123 Main Street, Melbourne, VIC 3000</div>
+                        <br>
+            
+                        <span class="question">My previous address</span>
+                        <div class="answer">456 Elm Street, Sydney, NSW 2000</div>
+                        <br>
+            
+                        <span class="question">Residential Status</span>
+                        <div class="answer"><span id="ember1463" class="ember-view">Owned</span></div>
+                        <br>
+                        
+                        <span class="question">Your Country/Territory of Birth</span>
+                        <div class="answer"><span id="ember1464" class="ember-view">Australia</span></div>
+                        <br>
+            
+                        <span class="question">Jurisdiction of tax residence</span>
+                        <div class="answer"><span id="ember1465" class="ember-view">Australia</span></div>
+                        <br>
+            
+                        <span class="question">Nationality (country/territory)</span>
+                        <div class="answer">AUSTRALIA</div>
+                        <br>
+            
+                        <span class="question">Government issued cards</span>
+                        <div class="answer">NO</div>
+                        <br>
+            
+                        <span class="question">Existing Bankio customer</span>
+                        <div class="answer">NO</div>
+                        <br>
+            
+                        <span class="question">Driver's Licence</span>
+                        <div class="answer">VIC 9876543</div>
+                        <br>
+                        <span class="question">Card Number</span>
+                        <div class="answer">B1234567</div>
+                        <br>
+                    </div>
+            
+                    <div id="cell42">
+                        <h5 class="mt-2 wide">Income and expenses</h5>
+                        
+                        <span class="question">Employer's full name</span>
+                        <div class="answer">Tech Solutions Ltd.</div>
+                        <br>
+                        
+                        <span class="question">Employer's address</span>
+                        <div class="answer">789 Technology Drive, Brisbane, QLD 4000</div>
+                        <br>
+            
+                        <span class="question">Employee since</span>
+                        <div class="answer">1 year</div>
+                        <br>
+                        <span class="question">Employer's phone number</span>
+                        <div class="answer">07-1234-5678</div>
+                        <br>
+            
+                        <span class="question">Job title</span>
+                        <div class="answer">Software Engineer</div>
+                        <br>
+            
+                        <div class="answer">Full-time</div>
+                        <br>
+                        
+                        <span class="question">Employment type</span>
+                        <div class="answer">Employee</div>
+                        <br>
+            
+                        <span class="question">Salary/wages</span>
+                        <div class="answer">$2,800 Fortnightly after tax</div>
+                        <br>
+            
+                        <span class="question">Other income</span>
+                        <div class="answer">$0 after tax</div>
+                        <br>
+            
+                        <span class="question">Your share of living expenses</span>
+                        <div class="answer">50% of $2,000 per month</div>
+                    </div>
+            
+                    <div id="cell51">
+                        <h5 class="mt-2 wide">Commitments, loans and assets</h5>
+                        <span class="question">Your share of rent/mortgage</span>
+                        <div class="answer">$1,000 per month</div>
+                        <br>
+            
+                        <span class="question">Mortgage balance</span>
+                        <div class="answer">$300,000</div>
+                        <br>
+            
+                        <span class="question">Total Share of monthly loan repayment</span>
+                        <div class="answer">$500 per month</div>
+                        <br>
+            
+                        <h5 class="mt-2 wide">Credit cards and store cards</h5>
+                        <span class="question">Total credit limit</span>
+                        <div class="answer">$5,000</div>
+                        <br>
+            
+                        <span class="question">Total amount owing</span>
+                        <div class="answer">$1,000</div>
+                        <br>
+            
+                        <span class="question">Property value</span>
+                        <div class="answer">$500,000</div>
+                        <br>
+            
+                        <span class="question">Vehicles/boats</span>
+                        <div class="answer">$20,000</div>
+                        <br>
+            
+                        <span class="question">Savings and shares</span>
+                        <div class="answer">$10,000</div>
+                        <br>
+                    </div>
+            
+                    <div id="cell54">
+                        <h5 class="mt-2 wide">Credit limit</h5>
+            
+                        <span class="question">Credit limit</span>
+                        <div class="answer">Apply for the maximum</div>
+                        <br>
+            
+                        <span class="question">Opt-in for overlimit</span>
+                        <div class="answer">NO</div>
+                        <br>
+                    </div>
+                </div>
+            
+                <div class="single-input focusOut">
+                    <div id="ember893" class="ember-view checkbox focusOut">
+                        <div class="flex">
+                            <div class="checkboxButton"></div>
+                            <div class="checkboxLabel bold">
+                                <p>By clicking Save & continue, you agree to <span>Bankio's Terms of Use, Privacy Policy, E-sign</span> & <span>communication Authorization.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <a href="form-completed.html" class="btn btn-primary large  cmn-btn" style="margin-bottom: 40px;">Submit</a>
+            </section>
+            
+            
                                 </form>
                             </div>
                         </div>
@@ -21214,5 +21742,31 @@
         <script src="./bank/wow.min.js"></script>
         <script src="./bank/plugin.js"></script>
         <script src="./bank/main.js"></script>
+        <script>
+            function showNextStep(step,title,totalSteps = 5) {
+                const steps = document.querySelectorAll('.step');
+                const titleEl = document.getElementById('uni-form-title');
+                const stepInfoEl = document.getElementById('step-info');
+                const progressEl = document.getElementById('progressStep');
+                steps.forEach(step => step.classList.remove('active'));
+                titleEl.innerText = title;
+
+                // Update step info
+                stepInfoEl.innerText = `Step ${step} of ${totalSteps}`;
+
+                // Calculate and update progress
+                const progress = (step / totalSteps) * 100;
+                progressEl.value = progress;
+
+                // Show the current step
+                document.getElementById('step' + step).classList.add('active');
+                // Scroll to the top of the page
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            function preventFormAction(event) {
+                event.preventDefault(); // Prevent the default form submission
+                return false; // Return false to further ensure the default action is prevented
+            }
+        </script>
     </body>
 </html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044) -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comm - Demo Template</title>
+    <link rel="stylesheet" href="./bank/bootstrap.min.css">
+    <link rel="stylesheet" href="./bank/fontawesome.min.css">
+    <link rel="stylesheet" href="./bank/nice-select.css">
+    <link rel="stylesheet" href="./bank/slick.css">
+    <link rel="stylesheet" href="./bank/arafat-font.css">
+    <link rel="stylesheet" href="./bank/animate.css">
+    <link rel="stylesheet" href="./bank/loan/style.min.css">
+    <link rel="stylesheet" href="./bank/style-rtl.min.css" id="rtl-stylesheet" disabled="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- start LTR to RTL -->
+    <div class="position-fixed d-flex flex-column text-center" id="draggableDiv">
+        <button id="btn-ltr" class="cmn-btn rounded-2 py-2 px-3">LTR</button>
+        <span class="draggable py-2"><i class="fas fa-arrows-alt xxlr m-0"></i></span>
+        <button id="btn-rtl" class="cmn-btn rounded-2 py-2 px-3">RTL</button>
+    </div>
+    <!-- end LTR to RTL -->
+
+    <!-- start preloader -->
+    <div class="preloader" id="preloader" style="opacity: 0; display: none;"></div>
+    <!-- end preloader -->
+
+    <!-- Scroll To Top Start-->
+    <a href="javascript:void(0)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- header-section start -->
+    <header class="header-section">
+        <div class="overlay">
+          <div class="container">
+            <div class="row d-flex header-area">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="car-loan.html">
+                  <span style="background-color: gold; width:20px;height: 20px; display: inline-block;"></span>
+                  <span style="font-size: 22px; font-weight: bold;">Comm Bank</span>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+                  <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown main-navbar">
+                      <a class="nav-link dropdown-toggle active" href="javascript:void(0)" data-bs-toggle="dropdown" data-bs-auto-close="outside">Product</a>
+                      <ul class="dropdown-menu main-menu shadow show">
+                        <li class="dropend sub-navbar">
+                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Account</a>
+                            <ul class="dropdown-menu sub-menu shadow show">
+                              <li><a class="nav-link" href="#">Account</a></li>
+                              <li><a class="nav-link" href="#">Account Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="">Product</a></li>
+                        <li class="dropend sub-navbar">
+                          <a href="javascript:void(0)" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Loan</a>
+                          <ul class="dropdown-menu sub-menu shadow show">
+                            <li><a class="nav-link" href="#">Business Loans</a></li>
+                            <li><a class="nav-link" href="#">Educations Loans</a></li>
+                            <li><a class="nav-link" href="#">Home Loans</a></li>
+                            <li><a class="nav-link" href="car-loan.html">Car Loans</a></li>
+                            <li><a class="nav-link" href="#">Personal Loans</a></li>
+                          </ul>
+                        </li>
+                        <li><a class="nav-link" href="#">Card</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown main-navbar">
+                      <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown" data-bs-auto-close="outside">Pages</a>
+                      <ul class="dropdown-menu main-menu shadow show">
+                        <li><a class="nav-link" href=#">Affiliate</a></li>
+                        <li class="dropend sub-navbar">
+                          <a href="javascript:void(0)" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Blog</a>
+                          <ul class="dropdown-menu sub-menu shadow show">
+                            <li><a class="nav-link" href="#">Blog List</a></li>
+                            <li><a class="nav-link" href="#">Blog Grid</a></li>
+                            <li><a class="nav-link" href="#">Blog Single</a></li>
+                          </ul>
+                        </li>
+                        <li><a class="nav-link" href="#">Remittance</a></li>
+                        <li><a class="nav-link" href="#">Career Single</a></li>
+                        <li><a class="nav-link" href="#">Faqs</a></li>
+                        <li><a class="nav-link" href="#">Login</a></li>
+                        <li><a class="nav-link" href="#">Password Set</a></li>
+                        <li><a class="nav-link" href="#">Varify Number</a></li>
+                        <li><a class="nav-link" href="#">OTP</a></li>
+                        
+                        <li><a class="nav-link" href="#">Terms Conditions</a></li>
+                        <li><a class="nav-link" href="#">Privacy Policy</a></li>
+                        
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                  <div class="right-area header-action d-flex align-items-center">
+                    <a href="register.html" class="cmn-btn">Open Account</a>
+                </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    <!-- Apply for a loan form Start -->
+    <section class="apply-for-loan" id="car-loan-form">
+        <div class="overlay pt-120">
+            <div class="row justify-content-center pt-10" style="border-top: 1px solid #ddd;">
+                <div class="col-lg-10">
+                    <div class="form-content">
+                        <div class="">
+                            <h3 class="title">Apply for a loan</h3>
+                            <p>Please fill out the form below. We will get in touch with you within 1-2 business days to request all necessary details. or <a href="verify-car-loan.html" class="btn btn-primary" style="border-radius: 50px;">Use Verifiable Credentials</a></p>
+                        </div>
+
+                        <!-- Step 1: Citizenship Status -->
+                        <form action="#" style="margin-top: 20px;">
+                            <div class="top step" id="step-1">
+                                <h5 style="margin:10px 0px">Step 1 of 15</h5>
+                                <h5>Are you an Australian/New Zealand citizen or Australian permanent resident?</h5>
+                                <p class="mb-4">This helps us show loan options available to you based on your situation.</p>
+                                <div class="form-check form-check-inline single-input">
+                                    <input type="radio" name="citizenship" value="yes" class="form-check-input" style="padding: 0;">
+                                    <label class="form-check-label">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline single-input">
+                                    <input type="radio" name="citizenship" value="no" class="form-check-input" style="padding: 0;">
+                                    <label class="form-check-label">No</label>
+                                </div>
+                                <div>
+                                    <button type="button" class="cmn-btn" onclick="goToStep(2)">Save & continue</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Review Details -->
+                            <div class="step" id="step-2" style="display:none;">
+                                <h5 style="margin:10px 0px">Step 2 of 15</h5>
+                                <h5>Let's review your details</h5>
+                                <div class="form-check-inline single-input" style="margin-top: 20px">
+                                    <label class="form-check-label" for="address">How long have you been living at your current address?</label>
+                                    <input type="text" id="address" placeholder="UNIT 3 663 STUD RD, SCORESBY, VIC 3179">
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="years">Years</label>
+                                        <input type="number" id="years" min="0" placeholder="0">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="months">Months</label>
+                                        <input type="number" id="months" min="0" placeholder="0">
+                                    </div>
+                                </div>
+                                <div class="single-input" style="height: 100px;">
+                                    <label for="residency-status" style="display: block;margin-top: 20px;margin-bottom: 10px;">Your residency status is:</label>
+                                    <select id="residency-status">
+                                        <option value="AUS">AUS citizen/permanent resident</option>
+                                        <option value="NZ">NZ citizen</option>
+                                    </select>
+                                </div>
+                                <div style="margin-top: 20px;">
+                                    <button type="button" class="cmn-btn" onclick="goToStep(3)">Save & continue</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Car Engine Type -->
+                            <div class="step" id="step-3" style="display:none;">
+                                <h5 style="margin:10px 0px">Step 3 of 15</h5>
+                                <h5>Select your car engine type</h5>
+                                <div class="form-check-inline single-input" style="margin-top: 20px;">
+                                    <label style="margin-right: 10px;"><input type="radio" name="engine-type" value="new" class="form-check-input" style="padding: 0;"> Brand new</label>
+                                    <label style="margin-right: 10px;"><input type="radio" name="engine-type" value="used-less-7" class="form-check-input" style="padding: 0;"> Used - 7 years old or less</label>
+                                    <label style="margin-right: 10px;"><input type="radio" name="engine-type" value="used-more-7" class="form-check-input" style="padding: 0;"> Used - more than 7 years old</label>
+                                    <p style="margin-top: 20px; margin-bottom: 10px;">Enjoy an energy-efficient discount on eligible hybrid or electric cars.</p>
+                                        <label style="margin-right: 10px;"><input type="radio" name="fuel-type" value="petrol-diesel" class="form-check-input" style="padding: 0;"> Petrol or diesel</label>
+                                        <label style="margin-right: 10px;"><input type="radio" name="fuel-type" value="electric-hybrid" class="form-check-input" style="padding: 0;"> Electric or hybrid</label>
+                                    </div>
+                                    <div>
+                                    <button class="cmn-btn" type="button" onclick="goToStep(4)">Next</button>
+                                </div>
+                            </div>
+
+                             <!-- Step 4: Loan Amount and Car Details -->
+                             <div class="step" id="step-4" style="display:none;">
+                                <h5 style="margin:10px 0px">Step 4 of 15</h5>
+                                <h5 style="margin-bottom: 20px;">How much do you need?</h5>
+                                <div class="single-input" style="margin-bottom: 20px;">
+                                    <label for="car">Car</label>
+                                    <input type="text" id="car" placeholder="Enter car make/model">
+                                </div>
+                                <div class="single-input">
+                                    <label for="car-amount">Car Amount</label>
+                                    <input type="number" id="car-amount" placeholder="Ex. $20,000" oninput="updateTotal()">
+                                </div>
+                                <p>There may be additional costs like registration and insurance.</p>
+                                <div class="single-input">
+                                    <label for="additional-costs">Additional Costs (Registration, Insurance)</label>
+                                    <input type="number" id="additional-costs" placeholder="Ex. $2,000" oninput="updateTotal()">
+                                </div>
+                                <div class="single-input">
+                                    <label for="total-borrow">Total You’d Like to Borrow</label>
+                                    <input type="number" id="total-borrow" value="0" readonly>
+                                </div>
+                                <!-- <p>After I've submitted my application, let me know if I can borrow more.</p> -->
+                                <button type="button" class="cmn-btn" onclick="goToStep(5)">Next</button>
+                            </div>
+
+                            <div class="step" id="step-5" style="display:none;">
+                                <h5 style="margin:10px 0px">Step 5 of 15</h5>
+                                <h5>Explore Your Options and Personalised Rates</h5>
+                                <div class="single-input">
+                                    <label>Amount Requested:</label>
+                                    <p>$5,5000</p>
+                                </div>
+                            
+                                <!-- Repayment Frequency -->
+                                <div class="single-input" style="height: 100px;">
+                                    <label style="display: block;">Repayment Frequency</label>
+                                    <div style="display: block; height: 50px;">
+                                        <select>
+                                            <option>Weekly</option>
+                                            <option>Fortnightly</option>
+                                            <option>Monthly</option>
+                                        </select>
+                                    </div>
+                                    <div style="display: block;">Keep in mind this is how we'll set up your repayments, you may want to align it to how you're paid.</div>
+                                </div>
+                            
+                                <h5 style="margin-top: 20px; margin-bottom: 20px;"><b>3 loan options available</b></h5>
+                            
+                                <!-- Bootstrap Row for 3 Column Layout -->
+                                <div class="row">
+                                    <!-- Secured Personal Loan Option -->
+                                    <div class="col-md-4 loan-option">
+                                        <h6>Secured Personal Loan</h6>
+                                        <p>Personalised Rate: <strong>6.49% p.a.</strong></p>
+                                        <p>Repayments: <strong>$24 Weekly</strong></p>
+                                        <div class="single-input" style="display: block;height: 60px;">
+                                            <label style="display: block;margin-top: 20px;">Choose your preferred loan term:</label>
+                                            <select  style="display: block; height: 30px;">
+                                                <option>7 years ($24 Weekly)</option>
+                                                <option>6 years</option>
+                                                <option>5 years</option>
+                                            </select>
+                                        </div>
+                                        <p style="display: block;margin-top: 20px;margin-bottom: 10px;">You could unlock a lower rate by using the car you’re buying as security. <a href="#">Tell me more</a></p>
+                                        <p>Extra repayments: Fee may apply**</p>
+                                        <p>Loan term: 1-7 years</p>
+                                        <p>Establishment fee: $250</p>
+                                        <p>Monthly fee: $15</p>
+                                        <p>Borrow from: $4,000 to $120,000</p>
+                                        <p>Redraw option: No</p>
+                                    </div>
+                            
+                                    <!-- Fixed Rate Loan Option -->
+                                    <div class="col-md-4 loan-option">
+                                        <h6>Fixed Rate Loan</h6>
+                                        <p>Personalised Rate: <strong>13.00% p.a.</strong></p>
+                                        <p>Repayments: <strong>$27 Weekly</strong></p>
+                                        <div class="single-input" style="display: block;height: 60px;">
+                                            <label style="display: block;margin-top: 20px;">Choose your preferred loan term:</label>
+                                            <select  style="display: block; height: 30px;">
+                                                <option>7 years ($27 Weekly)</option>
+                                                <option>6 years</option>
+                                                <option>5 years</option>
+                                            </select>
+                                        </div>
+                                        <p style="display: block;margin-top: 20px;margin-bottom: 10px;">Stay in control with a fixed interest rate and fixed repayments. No security needed.</p>
+                                        <p><strong>OFFER:</strong> Save $250 with no establishment fee on Unsecured Fixed Rate Loans when you apply and fund between 05 November 2024 and 25 February 2025.</p>
+                                        <p>Extra repayments: Fee may apply**</p>
+                                        <p>Loan term: 1-7 years</p>
+                                        <p>Establishment fee: $0</p>
+                                        <p>Monthly fee: $15</p>
+                                        <p>Borrow from: $4,000 to $50,000</p>
+                                        <p>Redraw option: No</p>
+                                    </div>
+                            
+                                    <!-- Variable Rate Loan Option -->
+                                    <div class="col-md-4 loan-option">
+                                        <h6>Variable Rate Loan</h6>
+                                        <p>Personalised Rate: <strong>13.50% p.a.</strong></p>
+                                        <p>Repayments: <strong>$27 Weekly</strong></p>
+                                        <div class="single-input" style="display: block;height: 60px;">
+                                            <label style="display: block;margin-top: 20px;">Choose your preferred loan term:</label>
+                                            <select style="display: block; height: 30px;">
+                                                <option>7 years ($27 Weekly)</option>
+                                                <option>6 years</option>
+                                                <option>5 years</option>
+                                            </select>
+                                        </div>
+                                        <p style="display: block;margin-top: 20px;margin-bottom: 10px;">Your repayment will change as interest rates go up and down. No security needed.</p>
+                                        <p><strong>OFFER:</strong> Save $250 with no establishment fee on Unsecured Variable Rate Loans when you apply and fund between 05 November 2024 and 25 February 2025.</p>
+                                        <p>Extra repayments: Unlimited</p>
+                                        <p>Loan term: 1-7 years</p>
+                                        <p>Establishment fee: $0</p>
+                                        <p>Monthly fee: $15</p>
+                                        <p>Borrow from: $4,000 to $50,000</p>
+                                        <p>Redraw option: Yes</p>
+                                    </div>
+                                </div>
+                            
+                                <!-- Navigation Buttons -->
+                                <div class="btn-area text-center mt-4">
+                                    <button type="button" class="cmn-btn" onclick="goToStep(6)">Save & continue</button>
+                                </div>
+                            </div>
+<!-- Step 6: Car Usage -->
+        <div class="step" id="step-6" style="display:none;">
+            <h5 style="margin:10px 0px">Step 6 of 15</h5>
+            <h5>Is this car mainly for personal use?</h5>
+            <p>To be eligible for a Secured Personal Loan, the car must be mainly for personal use.</p>
+            
+            <div class="single-input">
+                <label>Is this car mainly for personal use?</label>
+                <div class="single-input" style="margin-top: 20px;">
+                    <input type="radio" id="personal-use-yes" name="personal-use" value="yes"  class="form-check-input" style="padding: 0;">
+                    <label for="personal-use-yes">Yes</label>
+                </div>
+                <div  class="single-input">
+                    <input type="radio" id="personal-use-no" name="personal-use" value="no"  class="form-check-input" style="padding: 0;">
+                    <label for="personal-use-no">No</label>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="btn-area text-center">
+                <button type="button" class="cmn-btn" onclick="goToStep(7)">Next</button>
+            </div>
+        </div>
+<div class="step" id="step-7" style="display:none;">
+    <h5 style="margin:10px 0px">Step 7 of 15</h5>
+    <h5>Do you have the registration number or the Vehicle Identification Number (VIN) of the car you’re looking to buy?</h5>
+    <p>If you don't have either the registration details or the 17-digit VIN, choose "No" and you can add the details later.</p>
+
+    <div class="single-input">
+        <label style="margin-top: 10px;">Do you have the registration number or VIN?</label>
+        <div style="margin-top: 20px;">
+            <input type="radio" id="has-vin-yes" name="has-vin" value="yes" onclick="toggleVINInput(true)"  class="form-check-input" style="padding: 0;">
+            <label for="has-vin-yes">Yes</label>
+        </div>
+        <div>
+            <input type="radio" id="has-vin-no" name="has-vin" value="no" onclick="toggleVINInput(false)"  class="form-check-input" style="padding: 0;">
+            <label for="has-vin-no">No</label>
+        </div>
+    </div>
+
+    <!-- VIN Input (Shown if 'Yes' is selected) -->
+    <div class="single-input" id="vin-input" style="display:none;">
+        <label for="vin">Enter Registration Number or VIN</label>
+        <input type="text" id="vin" placeholder="Enter the 17-digit VIN or registration number">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="goToStep(8)">Next</button>
+    </div>
+</div>
+
+<!-- Step 8: Employment History -->
+<div class="step" id="step-8" style="display:none;">
+    <h5 style="margin:10px 0px">Step 8 of 15</h5>
+    <h5>Your Employment History</h5>
+    <p>Check the following details are correct and update them if needed, ensuring you list all your current jobs. Keep in mind, any previous jobs can't be deleted. If you don't currently work in a job already listed, you should add an end date by editing the job and unticking 'I still work here'.</p>
+
+    <div class="employment-entry mt-6">
+        <div class="single-input">
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" value="Student">
+        </div>
+        
+        <div class="single-input">
+            <label for="job-dates">Employment Period</label>
+            <input type="text" id="job-dates" value="August 2018 - now">
+        </div>
+
+        <div class="single-input">
+            <label for="current-job">Current Job?</label>
+            <input type="checkbox" class="form-check-input" id="current-job" checked>
+            <label for="current-job">I still work here</label>
+        </div>
+    </div>
+
+    <p>If you'd like to add more jobs or update your work status, you can do so below.</p>
+
+    <!-- Add New Job -->
+    <div class="single-input">
+        <label for="add-job">Add Job / Work Status</label>
+        <button type="button" class="btn" onclick="addJob()">Add Job</button>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button"  class="cmn-btn" onclick="goToStep(9)">Next</button>
+    </div>
+</div>
+<div class="step" id="step-9" style="display:none;">
+    <h5 style="margin:10px 0px">Step 9 of 15</h5>
+    <h5>Do you receive any government benefits, allowances, or child support?</h5>
+    <p>We've pre-filled any details you've previously told us. We may ask for documents to confirm what you tell us.</p>
+
+    <!-- Pre-filled Benefits/Allowances (if any) -->
+    <div class="benefit-entry">
+        <div class="single-input">
+            <label for="benefit-name">Benefit / Allowance</label>
+            <input type="text" id="benefit-name" value="Child Support">
+        </div>
+
+        <div class="single-input">
+            <label for="benefit-amount">Amount</label>
+            <input type="text" id="benefit-amount" value="$500 monthly">
+        </div>
+    </div>
+
+    <p>If you'd like to add more benefits or allowances, you can do so below.</p>
+
+    <!-- Add Benefit / Allowance -->
+    <div class="single-input">
+        <label for="add-benefit">Add Benefit / Allowance</label>
+        <button type="button" class="btn" onclick="addBenefit()">Add Benefit</button>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn"  onclick="goToStep(10)">Next</button>
+    </div>
+</div>
+
+<div class="step" id="step-10" style="display:none;">
+    <h5 style="margin:10px 0px">Step 10 of 15</h5>
+    <h5>Do you earn any income from assets or savings?</h5>
+    <p>We've pre-filled any details you've previously told us. We may ask for documents to confirm what you tell us.</p>
+
+    <!-- Pre-filled Income (if any) -->
+    <div class="income-entry">
+        <div class="single-input">
+            <label for="income-source">Income Source</label>
+            <input type="text" id="income-source" value="Interest from savings">
+        </div>
+
+        <div class="single-input">
+            <label for="income-amount">Amount</label>
+            <input type="text" id="income-amount" value="$150 monthly">
+        </div>
+    </div>
+
+    <p>If you'd like to add more income sources, you can do so below. If you don't receive any income from assets or savings, you can choose "I don't receive these".</p>
+
+    <!-- Add Income / Income Options -->
+    <div class="single-input">
+        <label for="add-income">Add Income</label>
+        <button type="button" class="btn" onclick="addIncome()">Add Income</button>
+    </div>
+
+    <!-- Option for No Income -->
+    <div class="single-input">
+        <input type="radio" id="no-income" name="income-source" value="no" class="form-check-input" style="padding: 0;">
+        <label for="no-income">I don't receive these</label>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="goToStep(11)">Next</button>
+    </div>
+</div>
+<div class="step" id="step-11" style="display:none;">
+    <h5 style="margin:10px 0px">Step 11 of 15</h5>
+    <h5>How many people do you financially support?</h5>
+    <p>Let us know how many people you financially support, as this can affect your loan options.</p>
+
+    <!-- Number of People Supported -->
+    <div class="single-input">
+        <label for="support-count">Number of people you financially support</label>
+        <input type="number" id="support-count" placeholder="Enter number of people" min="0">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="goToStep(12)">Next</button>
+    </div>
+</div>
+<div class="step" id="step-12" style="display:none;">
+    <h5 style="margin:10px 0px">Step 12 of 15</h5>
+    <h5>What's your current living arrangement?</h5>
+    <p>Let us know your current living situation, as it can affect your loan options and eligibility.</p>
+
+    <!-- Living Arrangement Options -->
+    <div class="single-input" style="height: 100px;">
+        <label for="living-arrangement" style="display: block;">Select your living arrangement</label>
+        <select id="living-arrangement" style="display: block;height: 30px;">
+            <option value="own-home">Own home</option>
+            <option value="rent-home">Rent home</option>
+            <option value="living-with-family">Living with family</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="goToStep(13)">Next</button>
+    </div>
+</div>
+<div class="step" id="step-13" style="display:none;">
+    <h5 style="margin:10px 0px">Step 13 of 15</h5>
+    <h5>Tell us what you pay for rent or board.</h5>
+    <p>Let us know how much you pay for rent or board each month. If you don't pay for either, select the appropriate option below.</p>
+
+    <!-- Rent or Board Amount -->
+    <div class="single-input">
+        <label for="rent-amount">Amount</label>
+        <input type="text" id="rent-amount" placeholder="Enter monthly amount" value="$0" />
+    </div>
+
+    <!-- Option for No Rent or Board Payment -->
+    <div class="single-input">
+        <input type="radio" id="no-rent" name="rent-payment" value="no" class="form-check-input" style="padding: 0;">
+        <label for="no-rent">I don't pay either</label>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="goToStep(14)">Next</button>
+    </div>
+</div>
+<div class="step" id="step-14" style="display:none;">
+    <h5 style="margin:10px 0px">Step 14 of 15</h5>
+    <h5>Your share of expenses</h5>
+    <p>It’s important to accurately capture your share (just the amount you pay if you split expenses with others) of expenses. Remember to include expenses paid for using buy now, pay later services (like StepPay or Afterpay) in the relevant categories. You don’t need to include payments for rent, credit cards, loans, or debt repayments.</p>
+
+    <!-- Living Expenses -->
+    <div class="single-input">
+        <label for="living-expenses">Living Expenses (Monthly)</label>
+        <input type="number" id="living-expenses" placeholder="Enter your monthly living expenses" value="1000">
+    </div>
+    <p class="help-text">Include food, clothing, personal items, transport, health, medical and fitness, children, tertiary education, pets, utilities, communication, entertainment, and domestic travel.</p>
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="calculateLivingExpenses()">Help me calculate</button>
+    </div>
+    
+    <!-- Additional Expenses -->
+    <div class="single-input">
+        <label for="additional-expenses">Additional Expenses (Monthly)</label>
+        <input type="number" id="additional-expenses" placeholder="Enter your additional monthly expenses" value="0">
+    </div>
+    <p class="help-text">Include expenses for secondary property, private education, personal insurances, counselling, overseas travel, recreational vehicle expenses, and insurances. You don’t need to include items already listed under living expenses.</p>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="goToStep(15)">Next</button>
+    </div>
+</div>
+<div class="step" id="step-15" style="display:none;">
+    <h5 style="margin:10px 0px">Step 15 of 15</h5>
+    <h5>Add your credit cards, loans and any other debts</h5>
+    <p>To help us consider your application, we'll need to understand your existing debts and liabilities. We’ve pre-filled those you’ve already told us about. If you have any others, add them here.</p>
+
+    <!-- Display Existing Debts (Pre-filled) -->
+    <div class="existing-debts">
+        <p><strong>Existing Debts:</strong></p>
+        <!-- Example list of pre-filled debts -->
+        <ul>
+            <li>Credit Card - $2,500</li>
+            <li>Personal Loan - $5,000</li>
+        </ul>
+    </div>
+
+    <!-- Add Other Non-CommBank Debts -->
+    <div class="single-input" style="display: block;height: 80px;">
+        <label for="other-debt" style="display: block;">Other non-CommBank debts</label>
+        <select id="other-debt" style="display: block;height: 30px;">
+            <option value="none">Select</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="personal-loan">Personal Loan</option>
+            <option value="student-loan">Student Loan</option>
+            <option value="car-loan">Car Loan</option>
+            <option value="mortgage">Mortgage</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <!-- Add New Debt Amount -->
+    <div class="single-input">
+        <label for="debt-amount">Debt Amount</label>
+        <input type="number" id="debt-amount" placeholder="Enter debt amount" />
+    </div>
+
+    <div class="btn-area text-center">
+        <button type="button" class="btn" onclick="addDebt()">Add</button>
+    </div>
+
+    <!-- Option to Skip Adding Debt -->
+    <div class="skip-option">
+        <input type="radio" id="no-debt" name="no-debt" value="no" class="form-check-input" style="padding: 0;">
+        <label for="no-debt">I don't have any debts</label>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <button type="button" class="cmn-btn" onclick="goToStep(16)">Next</button>
+    </div>
+</div>
+
+<div class="step" id="step-16" style="display:none;">
+    <h5>Application Submitted!</h5>
+    <p>Congratulations, your loan application has been successfully submitted. We will review your details and get in touch with you within the next 1-2 business days to proceed with the next steps.</p>
+
+    <!-- Optional Confirmation Message or Additional Instructions -->
+    <div class="confirmation-message">
+        <p><strong>What Happens Next:</strong></p>
+        <ul>
+            <li>We will review the details you’ve provided.</li>
+            <li>We may contact you for further information or documentation if necessary.</li>
+            <li>Once your application is approved, we’ll finalize the loan terms and disburse the funds.</li>
+        </ul>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="btn-area text-center">
+        <a type="button" class="cmn-btn" href="car-loan.html">Finish</a>
+    </div>
+</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Apply for a loan form End -->
+
+    <!-- Footer Area Start -->
+    <div class="footer-section">
+        <div class="container pt-120">
+            <div class="row cus-mar pt-120 pb-120 justify-content-between wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="footer-box">
+                        <a href="car-loan-form.html" class="logo">
+                            <span style="background-color: gold; width:20px;height: 20px; display: inline-block;"></span>
+                        </a>
+                        <p>A modern, technology-first bank built for you and your growing business.</p>
+                        <div class="social-link d-flex align-items-center">
+                            <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                            <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                            <a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-6">
+                    <div class="footer-box">
+                        <h5>Company</h5>
+                        <ul class="footer-link">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Awards</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-6">
+                    <div class="footer-box">
+                        <h5>Useful Links</h5>
+                        <ul class="footer-link">
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Business Loan</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-6">
+                    <div class="footer-box">
+                        <h5>Support</h5>
+                        <ul class="footer-link">
+                            <li><a href="#">Support@Union G Bank</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href=#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-8">
+                    <div class="footer-box">
+                        <h5>Subscribe</h5>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Your Email address">
+                                <button class="cmn-btn">Subscribe</button>
+                            </div>
+                        </form>
+                        <p>Get the latest updates via email. Any time you may unsubscribe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <div class="left">
+                            <p> Copyright © <a href="index.html">Comm Bank</a> | Designed by
+                                <a href="#">PIXELAXIS</a>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="cus-bor">Privacy </a>
+                            <a href="#">Terms &amp; Condition </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-area">
+            <img src="./bank/footer-Illu-left.png" class="left" alt="Images">
+            <img src="./bank/footer-Illu-right.png" class="right" alt="Images">
+        </div>
+    </div>
+
+    <!--==================================================================-->
+    <script src="./bank/jquery.min.js"></script>
+    <script src="./bank/bootstrap.min.js"></script>
+    <script src="./bank/fontawesome.js"></script>
+    <script src="./bank/slick.js"></script>
+    <script src="./bank/apexcharts.min.js"></script>
+    <script src="./bank/waypoint.min.js"></script>
+    <script src="./bank/counter.js"></script>
+    <script src="./bank/jquery.nice-select.min.js"></script>
+    <script src="./bank/wow.min.js"></script>
+    <script src="./bank/plugin.js"></script>
+    <script src="./bank/main.js"></script>
+    <script>
+        function goToStep(step) {
+            document.querySelectorAll('.step').forEach((el) => el.style.display = 'none');
+            document.getElementById(`step-${step}`).style.display = 'block';
+        }
+        function updateTotal() {
+            const carAmount = parseFloat(document.getElementById('car-amount').value) || 0;
+            const additionalCosts = parseFloat(document.getElementById('additional-costs').value) || 0;
+            const totalBorrow = carAmount + additionalCosts;
+            document.getElementById('total-borrow').value = totalBorrow;
+        }
+        function toggleVINInput(show) {
+            document.getElementById('vin-input').style.display = show ? 'block' : 'none';
+        }
+        function addJob() {
+            // You can customize this to open a form for the user to input job details
+            alert("This will allow you to add a new job.");
+        }
+        // Function to handle adding a new benefit or allowance (simple example, customize as needed)
+        function addBenefit() {
+            // You can customize this to open a form for the user to input benefit details
+            alert("This will allow you to add a new benefit or allowance.");
+        }
+        function addIncome() {
+            // You can customize this to open a form for the user to input income details
+            alert("This will allow you to add a new income source.");
+        }
+        function calculateLivingExpenses() {
+            alert("This feature will help you calculate your living expenses. Make sure to include all categories mentioned above.");
+        }
+        function addDebt() {
+            const debtType = document.getElementById("other-debt").value;
+            const debtAmount = document.getElementById("debt-amount").value;
+            if (debtType !== "none" && debtAmount) {
+                alert(`Added ${debtType} with amount $${debtAmount}.`);
+                // Here you could add the new debt to the list dynamically if needed
+            } else {
+                alert("Please select a debt type and enter the amount.");
+            }
+        }
+    </script>
+
+</body></html>

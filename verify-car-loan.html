@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044) -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comm - Demo Template</title>
+    <link rel="stylesheet" href="./bank/bootstrap.min.css">
+    <link rel="stylesheet" href="./bank/fontawesome.min.css">
+    <link rel="stylesheet" href="./bank/nice-select.css">
+    <link rel="stylesheet" href="./bank/slick.css">
+    <link rel="stylesheet" href="./bank/arafat-font.css">
+    <link rel="stylesheet" href="./bank/animate.css">
+    <link rel="stylesheet" href="./bank/loan/style.min.css">
+    <link rel="stylesheet" href="./bank/style-rtl.min.css" id="rtl-stylesheet" disabled="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- start LTR to RTL -->
+    <div class="position-fixed d-flex flex-column text-center" id="draggableDiv">
+        <button id="btn-ltr" class="cmn-btn rounded-2 py-2 px-3">LTR</button>
+        <span class="draggable py-2"><i class="fas fa-arrows-alt xxlr m-0"></i></span>
+        <button id="btn-rtl" class="cmn-btn rounded-2 py-2 px-3">RTL</button>
+    </div>
+    <!-- end LTR to RTL -->
+
+    <!-- start preloader -->
+    <div class="preloader" id="preloader" style="opacity: 0; display: none;"></div>
+    <!-- end preloader -->
+
+    <!-- Scroll To Top Start-->
+    <a href="javascript:void(0)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- header-section start -->
+    <header class="header-section register">
+        <div class="overlay">
+            <div class="container">
+                <div class="row d-flex header-area">
+                    <nav class="navbar d-flex justify-content-between navbar-expand-lg navbar-dark">
+                        <a class="navbar-brand" href="car-loan-form.html">
+                            <span style="background-color: gold; width:20px;height: 20px; display: inline-block;"></span>
+                            <span style="font-size: 18px; font-weight: bold;">Comm Bank</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-end">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    Already have account
+                                </li>
+                            </ul>
+                            <div class="right-area header-action d-flex align-items-center">
+                                <a href="#" class="cmn-btn">Login Now</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    <!-- Register In start -->
+    <section class="sign-in-up register">
+        <div class="overlay pt-120 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a class="cmn-btn" href="car-loan-form.html">Back</a>
+                        <div class="form-content">
+                            <div class="section-header">
+                                <h2 class="title">Verification QR Code and Link</h2>
+                                <div>Please Scan the QR code from the did wallet app.</div>
+                            </div>
+                            <div>
+                                <div class="row">        
+                                    <div class="qr-code-container" id="verificationQRCodeContainer">
+                                        <!-- Display the QR code image -->
+                                        <img id="verificationQRCodeImage" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=did:key:zQ3shQ4EvediXxh5QtEw7FfC81DYQmUzQzrhc4FhAoWvPxtDd" alt="QR Code">
+
+                                        <!-- Display the QR code link and add the copy button -->
+                                        <p id="verificationQRCodeLink" class="qrCodeLink" style="padding:10px 0px; word-break: break-all;">https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=did:key:zQ3shQ4EvediXxh5QtEw7FfC81DYQmUzQzrhc4FhAoWvPxtDd</p>
+                                        <!-- <button id="verificationCopyButton" class="copy-button" onclick="copyVerificationQRCodeLink()">Copy Link</button> -->
+                                    </div>
+    
+                                </div>
+                                <div class="btn-area">
+                                    <button class="cmn-btn copy-button" id="verificationCopyButton"  onclick="copyVerificationQRCodeLink()">Copy Link</button>
+                                    <!-- <a href="completed.html" class="cmn-btn" style="background-color: white; color: #000; border-color: #000; margin-left: 20px;">Verification Completed</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Register In end -->
+
+    <!--==================================================================-->
+    <script src="./bank/jquery.min.js"></script>
+    <script src="./bank/jquery-ui.js"></script>
+    <script src="./bank/bootstrap.min.js"></script>
+    <script src="./bank/fontawesome.js"></script>
+    <script src="./bank/slick.js"></script>
+    <script src="./bank/apexcharts.min.js"></script>
+    <script src="./bank/waypoint.min.js"></script>
+    <script src="./bank/counter.js"></script>
+    <script src="./bank/jquery.nice-select.min.js"></script>
+    <script src="./bank/wow.min.js"></script>
+    <script src="./bank/plugin.js"></script>
+    <script src="./bank/main.js"></script>
+    <script>
+        function copyVerificationQRCodeLink() {
+            // Get the verification QR code link text
+            const qrCodeLink = document.getElementById("verificationQRCodeLink").textContent;
+
+            // Create a temporary textarea element to copy the text to the clipboard
+            const textArea = document.createElement("textarea");
+            textArea.value = qrCodeLink;
+            document.body.appendChild(textArea);
+
+            // Select and copy the text
+            textArea.select();
+            document.execCommand("copy");
+
+            // Remove the temporary textarea
+            document.body.removeChild(textArea);
+
+            // Provide some visual feedback (e.g., change button text)
+            const copyButton = document.getElementById("verificationCopyButton");
+            copyButton.textContent = "Link Copied!";
+        }
+    </script>
+
+

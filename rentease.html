@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044) -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RentEase - Demo Template</title>
+    <link rel="stylesheet" href="./bank/bootstrap.min.css">
+    <link rel="stylesheet" href="./bank/fontawesome.min.css">
+    <link rel="stylesheet" href="./bank/nice-select.css">
+    <link rel="stylesheet" href="./bank/slick.css">
+    <link rel="stylesheet" href="./bank/arafat-font.css">
+    <link rel="stylesheet" href="./bank/animate.css">
+    <link rel="stylesheet" href="./bank/rent/style.min.css">
+    <link rel="stylesheet" href="./bank/style-rtl.min.css" id="rtl-stylesheet" disabled="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<!-- CSS for Modal -->
+<style>
+    .modal-content {
+        max-height: 100vh;
+        overflow-y: auto;
+        padding: 40px;
+        border-radius:0;
+        position:fixed;
+        right: 0;
+    }
+    .step-indicator {
+        font-size: 12px;
+        color: #666;
+    }
+    .step-indicator.active {
+        color: #e4002b;
+        font-weight: bold;
+    }
+    .form-step {
+        transition: all 0.3s ease;
+    }
+    .close{
+        font-size: 32px;
+        cursor: pointer;
+        margin: 0px 0px 20px 0px;
+        text-align: right;
+    }
+    .nice-select{
+        height: 50px;
+    }
+</style>
+<body>
+
+    <!-- start LTR to RTL -->
+    <div class="position-fixed d-flex flex-column text-center" id="draggableDiv">
+        <button id="btn-ltr" class="cmn-btn rounded-2 py-2 px-3">LTR</button>
+        <span class="draggable py-2"><i class="fas fa-arrows-alt xxlr m-0"></i></span>
+        <button id="btn-rtl" class="cmn-btn rounded-2 py-2 px-3">RTL</button>
+    </div>
+    <!-- end LTR to RTL -->
+
+    <!-- start preloader -->
+    <div class="preloader" id="preloader" style="opacity: 0; display: none;"></div>
+    <!-- end preloader -->
+
+    <!-- Scroll To Top Start-->
+    <a href="javascript:void(0)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- header-section start -->
+    <header class="header-section">
+        <div class="overlay">
+          <div class="container">
+            <div class="row d-flex header-area">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="dan-wine.html">
+                    <span style="background-color: #e4002b; width:20px;height: 20px; display: inline-block;"></span>
+                    <span style="font-size: 22px; font-weight: bold;">RentEase</span>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+                  <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown main-navbar">
+                      <a class="nav-link dropdown-toggle active" href="javascript:void(0)" data-bs-toggle="dropdown" data-bs-auto-close="outside">Product</a>
+                      <ul class="dropdown-menu main-menu shadow show">
+                        <li class="dropend sub-navbar">
+                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Account</a>
+                            <ul class="dropdown-menu sub-menu shadow show">
+                              <li><a class="nav-link" href="#">Account</a></li>
+                              <li><a class="nav-link" href="#">Account Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="">Product</a></li>
+                        <li class="dropend sub-navbar">
+                          <a href="javascript:void(0)" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Loan</a>
+                          <ul class="dropdown-menu sub-menu shadow show">
+                            <li><a class="nav-link" href="#">Business Loans</a></li>
+                            <li><a class="nav-link" href="#">Educations Loans</a></li>
+                            <li><a class="nav-link" href="#">Home Loans</a></li>
+                            <li><a class="nav-link" href="#">Car Loans</a></li>
+                            <li><a class="nav-link" href="#">Personal Loans</a></li>
+                          </ul>
+                        </li>
+                        <li><a class="nav-link" href="#">Card</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                  <div class="right-area header-action d-flex align-items-center">
+                    <a href="register.html" class="cmn-btn">Join as a member</a>
+                </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    <!-- banner-section start -->
+    <section class="banner-section inner-banner car-loans">
+        <div class="overlay">
+            <div class="banner-content d-flex align-items-center">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-lg-7 col-md-10">
+                            <div class="main-content" style="background: #e4002b;">
+                                <h3 style="color: white;">The heart of Melbourne property</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner-section end -->
+    <!-- Get Loan In start -->
+    <section class="account-feature loan-feature">
+        <div class="overlay pt-120 pb-120">
+            <div class="container wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="row cus-mar">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-box">
+                            <img src="https://images.listonce.com.au/custom/x700/listings/7034-acacia-place-abbotsford-vic-3067/202/01604202_img_01.jpg?xeQonFDZGuM" alt="icon">
+                            <p class="mt-4"><b>123 Fake St, Imaginary City</b></p>
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                                <p style="margin-right: 10px;"><i class="fas fa-bed"></i> <strong>3</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-bath"></i> <strong>3 </strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-car"></i> <strong>2</strong></p>
+                            </div>
+                            <button class="cmn-btn add-to-cart mt-2" style="padding: 5px 40px;">Apply Online</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-box">
+                            <img src="https://images.listonce.com.au/custom/x700/listings/41-hayes-road-strathmore-vic-3041/023/01599023_img_01.jpg?IRz3dCj9WP8" alt="icon">
+                            <p class="mt-4"><b>456 Fiction Ave, Dream Town</b></p>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <p style="margin-right: 10px;"><i class="fas fa-bed"></i> <strong>2</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-bath"></i> <strong>2</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-car"></i> <strong>1</strong></p>
+                            </div>
+                            <button class="cmn-btn add-to-cart mt-2" style="padding: 5px 40px;">Apply Online</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-box">
+                            <img src="https://images.listonce.com.au/custom/x700/listings/109-atkinson-street-oakleigh-vic-3166/712/01601712_img_01.jpg?UQCFdKtIA54" alt="icon">
+                            <p class="mt-4"><b>789 Nowhere Rd, Lost City</b></p>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <p style="margin-right: 10px;"><i class="fas fa-bed"></i> <strong>4</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-bath"></i> <strong>4</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-car"></i> <strong>3</strong></p>
+                            </div>
+                            <button class="cmn-btn add-to-cart mt-2" style="padding: 5px 40px;">Apply Online</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-box">
+                            <img src="https://i2.au.reastatic.net/800x600-format=webp/b29b72bcc8252081813e5b1e36b0caa10c3c515d8def26fd63c3727b436b8cab/image.jpg" alt="icon">
+                            <p class="mt-4"><b>1010 Fantasy Blvd, Imaginary World</b></p>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <p style="margin-right: 10px;"><i class="fas fa-bed"></i> <strong>1</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-bath"></i> <strong>1</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-car"></i> <strong>1</strong></p>
+                            </div>
+                            <button class="cmn-btn add-to-cart mt-2" style="padding: 5px 40px;">Apply Online</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-box">
+                            <img src="https://i2.au.reastatic.net/800x600-format=webp/3799419373606ef2878c1befd25170bb49fdf043c7464fece8b328408d263071/image.jpg" alt="icon">
+                            <p class="mt-4"><b>2020 Dream St, Fantasy City</b></p>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <p style="margin-right: 10px;"><i class="fas fa-bed"></i> <strong>2</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-bath"></i> <strong>2</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-car"></i> <strong>2</strong></p>
+                            </div>
+                            <button class="cmn-btn add-to-cart mt-2" style="padding: 5px 40px;">Apply Online</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-box">
+                            <img src="https://i2.au.reastatic.net/800x600-format=webp/ffdf2705c14ba99d0d6c9df9103f23a3267253c85b75744906e422eb60da143d/image.jpg" alt="icon">
+                            <p class="mt-4"><b>3030 Imaginary Blvd, Fantasy Park</b></p>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <p style="margin-right: 10px;"><i class="fas fa-bed"></i> <strong>5</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-bath"></i> <strong>4</strong></p>
+                                <p style="margin-right: 10px;"><i class="fas fa-car"></i> <strong>4</strong></p>
+                            </div>
+                            <button class="cmn-btn add-to-cart mt-2" style="padding: 5px 40px;">Apply Online</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Get Loan In end -->
+    <!-- Rental Application Modal -->
+<div id="purchaseModal" class="modal">
+    <div class="modal-content" style="width: 600px; max-width: 90%;height: 100%;">
+        <span class="close">&times;</span>
+        <div class="steps-container mb-4">
+            <div class="progress">
+                <div class="progress-bar" style="background-color: #e4002b;" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+                <span class="step-indicator active">Personal Info</span>
+                <span class="step-indicator">Employment</span>
+                <span class="step-indicator">Rental History</span>
+                <span class="step-indicator">References</span>
+                <span class="step-indicator">Documents</span>
+            </div>
+        </div>
+
+        <form id="checkoutForm">
+            <!-- Step 1: Personal Information -->
+            <div class="mt-2 mb-4">
+                Please Enter your details to Start your Online Application or <a class="btn " style="border-radius: 50px;background-color: #e4002b;color:white" href="verify-rental-application.html">Use Verifiable Credentials</a>
+            </div>
+            <div class="form-step" id="step1">
+                <h5>Personal Information</h5>
+                <div class="form-group mb-3 mt-2">
+                    <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email Address">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="tel" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="date" class="form-control" placeholder="Date of Birth">
+                </div>
+            </div>
+
+            <!-- Step 2: Employment Details -->
+            <div class="form-step d-none" id="step2">
+                <h5>Employment Information</h5>
+                <div class="form-group mb-3 mt-2">
+                    <input type="text" class="form-control" placeholder="Current Employer">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" placeholder="Position/Title">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="number" class="form-control" placeholder="Annual Income">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" placeholder="Length of Employment">
+                </div>
+            </div>
+
+            <!-- Step 3: Rental History -->
+            <div class="form-step d-none" id="step3">
+                <h5>Rental History</h5>
+                <div class="form-group mb-3 mt-2">
+                    <input type="text" class="form-control" placeholder="Current Address">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" placeholder="Current Landlord Name">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="tel" class="form-control" placeholder="Landlord Phone Number">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" placeholder="Length of Stay">
+                </div>
+            </div>
+
+            <!-- Step 4: References -->
+            <div class="form-step d-none" id="step4">
+                <h5>References</h5>
+                <div class="form-group mb-3 mt-4">
+                    <h6 class="mb-2">Reference 1</h6>
+                    <input type="text" class="form-control mb-2" placeholder="Full Name">
+                    <input type="tel" class="form-control mb-2" placeholder="Phone Number">
+                    <input type="text" class="form-control" placeholder="Relationship">
+                </div>
+                <div class="form-group mb-3">
+                    <h6 class="mb-2 mt-2">Reference 2</h6>
+                    <input type="text" class="form-control mb-2" placeholder="Full Name">
+                    <input type="tel" class="form-control mb-2" placeholder="Phone Number">
+                    <input type="text" class="form-control" placeholder="Relationship">
+                </div>
+            </div>
+
+            <!-- Step 5: Documents -->
+            <div class="form-step d-none" id="step5">
+                <h5>Required Documents</h5>
+                <div class="form-group mb-3 mt-2">
+                    <label class="mb-2">Photo ID (Driver's License/Passport)</label>
+                    <input type="file" class="form-control" style="height: 38px;">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="mb-2">Proof of Income (Pay Stubs/W2)</label>
+                    <input type="file" class="form-control" style="height: 38px;">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="mb-2">Bank Statements (Last 3 months)</label>
+                    <input type="file" class="form-control" style="height: 38px;">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="cmn-btn" id="prevBtn" style="display: none;">Previous</button>
+                <button type="button" class="cmn-btn" id="nextBtn">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <!-- Footer Area Start -->
+    <div class="footer-section">
+        <div class="container pt-120">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <div class="left">
+                            <p> Copyright © <a href="jelly-rent.html">RentEase</a> | Designed by
+                                <a href="#">PIXELAXIS</a>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="cus-bor">Privacy </a>
+                            <a href="#">Terms &amp; Condition </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--==================================================================-->
+    <script src="./bank/jquery.min.js"></script>
+    <script src="./bank/bootstrap.min.js"></script>
+    <script src="./bank/fontawesome.js"></script>
+    <script src="./bank/slick.js"></script>
+    <script src="./bank/apexcharts.min.js"></script>
+    <script src="./bank/waypoint.min.js"></script>
+    <script src="./bank/counter.js"></script>
+    <script src="./bank/jquery.nice-select.min.js"></script>
+    <script src="./bank/wow.min.js"></script>
+    <script src="./bank/plugin.js"></script>
+    <script src="./bank/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize variables
+            const modal = document.getElementById("purchaseModal");
+            const closeBtn = document.querySelector(".close");
+            const nextBtn = document.getElementById("nextBtn");
+            const prevBtn = document.getElementById("prevBtn");
+            const progressBar = document.querySelector(".progress-bar");
+            const formSteps = document.querySelectorAll(".form-step");
+            const stepIndicators = document.querySelectorAll(".step-indicator");
+            let currentStep = 1;
+            const totalSteps = 5;
+        
+            // Apply Online button click handler
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", function(e) {
+                    // Show modal and reset to first step
+                    modal.style.display = "block";
+                    currentStep = 1;
+                    updateStep(1);
+                });
+            });
+        
+            // Close modal handler
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+                currentStep = 1;
+                updateStep(1);
+            };
+        
+            // Next button click handler
+            nextBtn.onclick = function() {
+                if (validateCurrentStep()) {
+                    if (currentStep < totalSteps) {
+                        currentStep++;
+                        updateStep(currentStep);
+                    } else {
+                        handleFormSubmission();
+                    }
+                }
+            };
+        
+            // Previous button click handler
+            prevBtn.onclick = function() {
+                if (currentStep > 1) {
+                    currentStep--;
+                    updateStep(currentStep);
+                }
+            };
+        
+            // Function to validate current step
+            function validateCurrentStep() {
+                const currentStepElement = document.getElementById(`step${currentStep}`);
+                const requiredFields = currentStepElement.querySelectorAll('input[required]');
+                let isValid = true;
+        
+                requiredFields.forEach(field => {
+                    if (!field.value) {
+                        field.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('is-invalid');
+                    }
+                });
+        
+                return isValid;
+            }
+        
+            // Function to update the display for the current step
+            function updateStep(step) {
+                // Update progress bar
+                progressBar.style.width = `${(step / totalSteps) * 100}%`;
+        
+                // Hide all steps and show current step
+                formSteps.forEach((stepElement, index) => {
+                    stepElement.classList.toggle('d-none', index + 1 !== step);
+                });
+        
+                // Update step indicators
+                stepIndicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index + 1 <= step);
+                });
+        
+                // Update buttons
+                prevBtn.style.display = step === 1 ? 'none' : 'block';
+                nextBtn.textContent = step === totalSteps ? 'Submit Application' : 'Next';
+            }
+        
+            // Function to handle form submission
+            function handleFormSubmission() {
+                if (validateCurrentStep()) {
+                    alert('Application submitted successfully! Our team will review your application and contact you shortly.');
+                    modal.style.display = "none";
+                    currentStep = 1;
+                    updateStep(1);
+                    // Reset form
+                    document.getElementById('checkoutForm').reset();
+                }
+            }
+        
+            // Close modal when clicking outside
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                    currentStep = 1;
+                    updateStep(1);
+                }
+            };
+        });
+        </script>
+
+</body></html>
